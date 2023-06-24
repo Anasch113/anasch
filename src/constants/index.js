@@ -184,7 +184,7 @@ import {
     {
       testimonial:
         "Anas has the ability to convert the ideas into reality with his excellent development skills",
-      name: "Pr. Allah Nawaz",
+      name: "Prof. Allah Nawaz",
       designation: "GM",
       company: "PGC",
       image: pgc,
