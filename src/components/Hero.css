@@ -60,9 +60,9 @@
     }
   
     .wrapper .static-txt {
-      font-size: 30px;
+      font-size: 36px;
       color: #915EFF;
-      font-weight: 800;
+      font-weight: 900;
       
     }
   
@@ -72,7 +72,7 @@
       margin-top: 15px;
       height: auto;
       line-height: normal;
-      overflow: visible;
+      overflow: none;
     }
   
     .dynamic-txts li {
@@ -84,9 +84,11 @@
   
     .dynamic-txts li span {
       line-height: normal;
+      width: 50%;
+      font-weight: 700;
     }
     @keyframes slide {
-        100%{
+        50%{
           top: -360px;
         }
       }
