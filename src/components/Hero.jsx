@@ -1,10 +1,7 @@
 import { motion } from "framer-motion";
 import "./Hero.css"
 import { styles } from "../styles";
-import github from "../assets/github.png"
-import { ComputersCanvas } from "./canvas";
-import resume from "../assets/anasch.pdf"
-import { Link } from "react-router-dom";
+
 const Hero = () => {
  
   return (

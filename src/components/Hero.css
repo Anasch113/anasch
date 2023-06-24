@@ -61,10 +61,14 @@
   
     .wrapper .static-txt {
       font-size: 30px;
+      color: #915EFF;
+      font-weight: 800;
+      
     }
   
     .wrapper .dynamic-txts {
       margin-left: 0;
+      font-weight: 100;
       margin-top: 15px;
       height: auto;
       line-height: normal;
@@ -72,10 +76,10 @@
     }
   
     .dynamic-txts li {
-        /* animation: slide 10s steps(12) infinite;
-        animation: typing 10s steps(12) infinite; */
+  
       font-size: 20px;
       animation: none;
+   color: #fff;
     }
   
     .dynamic-txts li span {
