@@ -152,21 +152,7 @@ import {
        
       ],
     },
-    {
-      title: "Frontend Developer",
-      company_name: "Scale It More",
-      icon: "https://scaleitmore.in/wp-content/uploads/2022/12/cropped-Untitled_design__9_-removebg-preview.png",
-      iconBg: "#E6DEDD",
-      date: "May 2023 - July 2023",
-      points: [
-        "Developing and maintaining web applications using front-end libraries and other related technologies.",
-        ,
-
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers."
-       
-      ],
-    },
+ 
     {
       title: "Full Stack Web Developer",
       company_name: "PGC",
