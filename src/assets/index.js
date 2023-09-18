@@ -28,16 +28,19 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
-
+import codsoft from "../assets/codsoft.png"
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
-
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
-
+import codeh7 from "../assets/codeh7.png"
+import netflix from "../assets/netflix.png"
+import edu1 from "../assets/edu1.png"
+import webdesign from "../assets/webdesign.png"
+import pgc1 from "../assets/pgc1.png"
 export {
   logo,
   backend,
@@ -74,5 +77,11 @@ export {
   fiverr,
   upwork,
   voiceup,
-  pgc
+  pgc,
+  codsoft,
+  codeh7,
+  netflix,
+  edu1,
+  webdesign,
+  pgc1
 };
