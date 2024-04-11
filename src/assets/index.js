@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
-import shopix from "../assets/shopix.png"
+
 import ugc from "../assets/ugc.png"
 import web from "./web.png";
 import github from "./github.png";
@@ -11,7 +11,7 @@ import menu from "./menu.svg";
 import close from "./close.svg";
 import pgc from "../assets/pgc.jpg"
 import voiceup from "../assets/voiceup.png"
-import upwork from "../assets/upwork.png"
+
 import fiverr from "../assets/fiverr.png"
 import arcsports from "../assets/arcsports.png"
 import iNoteCloud from "../assets/iNoteCloud.png"
@@ -29,13 +29,7 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 import codsoft from "../assets/codsoft.png"
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+
 import codeh7 from "../assets/codeh7.png"
 import netflix from "../assets/netflix.png"
 import edu1 from "../assets/edu1.png"
@@ -63,19 +57,14 @@ export {
   tailwind,
   typescript,
   threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
+
   iNoteCloud,
   arcsports,
-  carrent,
-  jobit,
-  tripguide,
+
   ugc,
-  shopix,
+  
   fiverr,
-  upwork,
+
   voiceup,
   pgc,
   codsoft,

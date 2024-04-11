@@ -1,7 +1,7 @@
 import { EarthCanvas, BallCanvas, ComputersCanvas, StarsCanvas } from './canvas';
-import Hero from './Hero';
+import Hero from '../NewComponents/Hero';
 import Navbar from './Navbar';
-import About from './About';
+import About from '../NewComponents/About';
 import Tech from './Tech';
 import Experience from './Experience';
 import Works from './Works';

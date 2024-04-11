@@ -6,7 +6,7 @@ import {
     iNoteCloud,
     web,
     javascript,
-    typescript,
+    
     html,
     css,
     reactjs,
@@ -17,19 +17,16 @@ import {
     git,
     figma,
     docker,
-    meta,
-    starbucks,
-    tesla,
+
+    
     ugc,
-    shopix,
-    shopify,
+   
  fiverr,
-    carrent,
+    
     pgc,
-    upwork,
+   
     voiceup,
-    jobit,
-    tripguide,
+   
     threejs,
     codsoft,
     codeh7,
@@ -133,29 +130,31 @@ import {
   
   const experiences = [
     {
-      title: "Frontend Developer ",
+      title: "Full Stack Developer ",
       company_name: "fiverr",
       icon: fiverr,
       iconBg: "#383E56",
       date: "March 2021- Present",
       points: [
        
-        "As a seasoned freelance Frontend Developer with a strong Fiverr existence, I've had the pleasure of creating appealing digital experiences for clients all over the world. My journey has been distinguished by excellence in web development, since I have a passion for merging beauty and efficiency.",
-        "Over 3+ years, I've honed my skills in HTML5, CSS(Tailwind CSS, Bootstrap 5, SCSS), JavaScript (Reactjs, Nextjs, Threejs) to create visually stunning and responsive websites. Each project on Fiverr has been an opportunity to showcase my dedication to delivering pixel-perfect, user-friendly interfaces that exceed client expectations.",
+        "As a seasoned freelance Full Stack Developer with a strong Fiverr existence, I've had the pleasure of creating appealing digital experiences for clients all over the world.",
+        " My journey has been distinguished by excellence in web development, since I have a passion for merging efficiency and performance .",
+        "Over 3+ years, I've honed my skills in HTML5, CSS(Tailwind CSS, Bootstrap 5, SCSS), JavaScript (Reactjs, Nextjs, Nodejs ) to create powerfull and responsive applications.",
+        " Each project on Fiverr has been an opportunity to showcase my dedication to delivering pixel-perfect, user-friendly applications that exceed client expectations."
       ],
     },
-    {
-      title: "Full Stack Developer",
-      company_name: "PGC",
-      icon: pgc,
-      iconBg: "#383E56",
-      date: "Jan 2021 - present",
-      points: [
-        "PGC-HUB, a full-fledged web application, was created by me at PGC. I am in charge of maintaining and updating this website. In addition, I use my skill set to create new online applications. This is the platform that allows me to improve my talents and gain market experience.",
+    // {
+    //   title: "Full Stack Developer",
+    //   company_name: "PGC",
+    //   icon: pgc,
+    //   iconBg: "#383E56",
+    //   date: "Jan 2021 - present",
+    //   points: [
+    //     "PGC-HUB, a full-fledged web application, was created by me at PGC. I am in charge of maintaining and updating this website. In addition, I use my skill set to create new online applications. This is the platform that allows me to improve my talents and gain market experience.",
       
         
-      ],
-    },
+    //   ],
+    // },
     {
       title: "Frontend Developer",
       company_name: "Scale It More",
@@ -175,7 +174,7 @@ import {
     
     {
       title: "Full stack Developer",
-      company_name: "CodSoft",
+      company_name: "CodSoft India",
       icon: codsoft,
       iconBg: "#E6DEDD",
       date: "june 2023 - September 2023",
