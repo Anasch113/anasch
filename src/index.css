@@ -210,16 +210,16 @@
 }
 
 .glassmorphism-container {
-  background: rgba(225, 164, 23, 0.3);
-  
-  backdrop-filter: blur( 20px );
-  -webkit-backdrop-filter: blur( 20px );
+  background: transparent;
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 
   border: 2px solid #FDB827;
- 
- 
 
-border-radius: 30px;
+
+
+  border-radius: 30px;
 }
 
 

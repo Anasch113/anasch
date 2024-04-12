@@ -13,6 +13,8 @@ module.exports = {
         "black-100": "#100d25",
         "black-200": "#090325",
         "white-100": "#f3f3f3",
+        "gray-color" : "#101018",
+        "gray-dark" : "#888888"
       },
       backgroundColor: {
         "bgc-yellow ": "#FDB827"
@@ -24,7 +26,7 @@ module.exports = {
         xs: "450px",
       },
       backgroundImage: {
-        "hero-pattern": "url('/src/assets/shinybg.svg')",
+        "hero-pattern": "url('/herobg.svg')",
       },
       textColor: {
         "text-yellow": "#FDB827"

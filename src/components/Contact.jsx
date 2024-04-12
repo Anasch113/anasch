@@ -6,6 +6,7 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+import { VscSend } from "react-icons/vsc";
 
 const Contact = () => {
   const formRef = useRef();
@@ -31,19 +32,19 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
-   
+
     emailjs.send(
-        'service_h2dnguh',
-        'template_lwigsgk',
-        {
-          from_name: form.name,
-          to_name: "Anas Ch",
-          from_email: form.email,
-          to_email: "anaschaudry2002@gmail.com",
-          message: form.message,
-        },
-       '6w4SVYXj59ECt3KUR'
-      )
+      'service_h2dnguh',
+      'template_lwigsgk',
+      {
+        from_name: form.name,
+        to_name: "Anas Ch",
+        from_email: form.email,
+        to_email: "anaschaudry2002@gmail.com",
+        message: form.message,
+      },
+      '6w4SVYXj59ECt3KUR'
+    )
       .then(
         () => {
           setLoading(false);
@@ -70,65 +71,105 @@ const Contact = () => {
     >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
+        className='flex-[0.75] bg-white p-8 rounded-3xl justify-center'
       >
-        <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText}>Contact.</h3>
+
+        <p className="sm:text-[18px] text-[14px] text-gray-dark uppercase tracking-wider">Get in touch</p>
+        <h3 className="text-gray-dark font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">Contact.</h3>
 
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className='mt-12 flex flex-col gap-8'
+          className='mt-12 relative flex flex-col gap-8 w-full'
         >
+
+          <div className="flex flex-row w-full gap-2">
+            <label className='flex flex-col w-2/4'>
+              <span className='text-black-100 font-medium mb-4'>Your Email</span>
+              <input
+                type='email'
+                name='name'
+                value={form.name}
+                onChange={handleChange}
+                placeholder="What's your email address?"
+                className='bg-white-100 border py-4 px-6 placeholder:text-gray-500 text-black-100 rounded-full outline-none  font-medium'
+              />
+            </label>
+            <label className='flex flex-col w-2/4'>
+              <span className='text-black-100 font-medium mb-4'>Your name</span>
+              <input
+                type='text'
+                name='email'
+                value={form.email}
+                onChange={handleChange}
+                placeholder="What's your good name?"
+                className='bg-white-100 border py-4 px-6 placeholder:text-gray-500 text-black-100 rounded-full outline-none  font-medium'
+              />
+            </label>
+          </div>
+
+
+          <div className="flex flex-row w-full gap-2">
+            <label className='flex flex-col w-2/4'>
+              <span className='text-black-100 font-medium mb-4'>Your Email</span>
+              <input
+                type='email'
+                name='name'
+                value={form.name}
+                onChange={handleChange}
+                placeholder="What's your email address?"
+                className='bg-white-100 border py-4 px-6 placeholder:text-gray-500 text-black-100 rounded-full outline-none  font-medium'
+              />
+            </label>
+            <label className='flex flex-col w-2/4'>
+              <span className='text-black-100 font-medium mb-4'>Your name</span>
+              <input
+                type='text'
+                name='email'
+                value={form.email}
+                onChange={handleChange}
+                placeholder="What's your good name?"
+                className='bg-white-100 border py-4 px-6 placeholder:text-gray-500 text-black-100 rounded-full outline-none  font-medium'
+              />
+            </label>
+          </div>
+
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Email</span>
-            <input
-              type='email'
-              name='name'
-              value={form.name}
-              onChange={handleChange}
-              placeholder="What's your email address?"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
-            />
-          </label>
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your name</span>
-            <input
-              type='text'
-              name='email'
-              value={form.email}
-              onChange={handleChange}
-              placeholder="What's your good name?"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
-            />
-          </label>
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Message</span>
+            <span className='text-black-100 font-medium mb-4'>Your Message</span>
             <textarea
               rows={7}
               name='message'
               value={form.message}
               onChange={handleChange}
               placeholder='What you want to say?'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className='bg-white-100 py-4 px-6 placeholder:text-grayy text-black-100 rounded-lg outline-none border-none font-medium'
             />
           </label>
 
           <button
             type='submit'
-            className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
+            className='bg-[#FDB827] py-3 px-8 rounded-3xl outline-none w-fit text-black-100 font-semibold  shadow-primary'
           >
-            {loading ? "Sending..." : "Send"}
+            <span className="flex items-center text-lg gap-2">
+
+              {loading ? "Sending..." : "Send"}
+              <VscSend />
+            </span>
+
           </button>
         </form>
+        <div className="absolute top-[580px] left-[600px] z-50">
+          <img className="w-60 h-60" src="/3d-laptop-boy.png" alt="" />
+        </div>
+
       </motion.div>
 
-      <motion.div
+      {/* <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
         className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
       >
         <EarthCanvas />
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 };
