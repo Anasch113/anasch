@@ -67,11 +67,11 @@ const Contact = () => {
 
   return (
     <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
+      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden items-center justify-center`}
     >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className='flex-[0.75] bg-white p-8 rounded-3xl justify-center'
+        className='flex-[0.75] bg-white p-8 rounded-3xl justify-center '
       >
 
         <p className="sm:text-[18px] text-[14px] text-gray-dark uppercase tracking-wider">Get in touch</p>
@@ -158,7 +158,7 @@ const Contact = () => {
 
           </button>
         </form>
-        <div className="absolute top-[580px] left-[600px] z-50">
+        <div className="absolute top-[580px] left-[600px]  z-50 ">
           <img className="w-60 h-60" src="/3d-laptop-boy.png" alt="" />
         </div>
 

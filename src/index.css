@@ -132,6 +132,21 @@
   cursor: pointer;
   transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
 }
+.glass-button-2 {
+  padding: 12px 12px;
+  border-radius: 9999px;
+  color: #FFFFFF;
+  /* Yellow color */
+  background-color: rgba(255, 255, 255, 0.1);
+  /* Semi-transparent white */
+  backdrop-filter: blur(10px);
+  /* Blur effect */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+  width: 50%;
+border: 1px solid white;
+}
 
 .glass-button:hover {
   background-color: rgba(255, 255, 255, 0.2);
