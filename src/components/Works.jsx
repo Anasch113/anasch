@@ -29,18 +29,21 @@ const ProjectCard = ({
       >
 
         {/* 1st part */}
-        <div className=' relative w-full h-[400px]'>
-          <div className="w-[500px] h-[300px] ">
+        <div className='flex items-center relative p-3  h-[400px] rounded-2xl'>
+          <div className=" w-[500px] h-[320px] z-0">
             <img
               src={image}
               alt='project_image'
-              className='object-cover rounded-2xl'
+              className=' object-cover rounded-2xl '
               style={{ width: '100%', height: '100%' }}
             />
           </div>
 
+ {/* Overlay */}
+ <div className="absolute inset-0 bg-gray-300 opacity-50 -z-10 rounded-2xl"></div>
 
-          <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
+
+          <div className='absolute inset-0 flex  m-3 card-img_hover z'>
             <div
               onClick={() => window.open(source_code_link, "_blank")}
               className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
