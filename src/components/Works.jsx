@@ -7,6 +7,8 @@ import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
+import { IoIosLink } from "react-icons/io";
+
 
 const ProjectCard = ({
   index,
@@ -39,8 +41,8 @@ const ProjectCard = ({
             />
           </div>
 
- {/* Overlay */}
- <div className="absolute inset-0 bg-gray-300 opacity-50 -z-10 rounded-2xl"></div>
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-gray-300 opacity-50 -z-10 rounded-2xl"></div>
 
 
           <div className='absolute inset-0 flex  m-3 card-img_hover z'>
@@ -79,7 +81,12 @@ const ProjectCard = ({
             }
 
           </div>
-          <button className="glass-button-2">Visit</button>
+          <button className="glass-button-2">
+            <span className="w-full flex items-center justify-center gap-2">
+              <IoIosLink />
+              <p>Visit</p>
+            </span>
+          </button>
         </div>
       </Tilt>
     </motion.div>

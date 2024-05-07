@@ -111,24 +111,24 @@ const Contact = () => {
 
           <div className="flex flex-row w-full gap-2">
             <label className='flex flex-col w-2/4'>
-              <span className='text-black-100 font-medium mb-4'>Your Email</span>
+              <span className='text-black-100 font-medium mb-4'>Mobile Number</span>
               <input
-                type='email'
-                name='name'
+                type='number'
+                name='phone'
                 value={form.name}
                 onChange={handleChange}
-                placeholder="What's your email address?"
+                placeholder="Phone Number"
                 className='bg-white-100 border py-4 px-6 placeholder:text-gray-500 text-black-100 rounded-full outline-none  font-medium'
               />
             </label>
             <label className='flex flex-col w-2/4'>
-              <span className='text-black-100 font-medium mb-4'>Your name</span>
+              <span className='text-black-100 font-medium mb-4'>Subject</span>
               <input
                 type='text'
-                name='email'
+                name='subject'
                 value={form.email}
                 onChange={handleChange}
-                placeholder="What's your good name?"
+                placeholder="Subject"
                 className='bg-white-100 border py-4 px-6 placeholder:text-gray-500 text-black-100 rounded-full outline-none  font-medium'
               />
             </label>
