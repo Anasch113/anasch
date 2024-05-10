@@ -15,37 +15,40 @@ const FeedbackCard = ({
   image,
 }) => (
   <motion.div
-    variants={fadeIn("", "", index )}
-    className='glassmorphism-container  p-10 rounded-3xl xs:w-[320px] w-full'
+    variants={fadeIn("", "", index)}
+    className='bg-white  p-10 rounded-3xl xs:w-[320px] w-full '
   >
-    <p className='text-white font-black text-[48px]'>"</p>
+    <div className="w-full justify-center flex ">
+      <span className='bg-tertiary flex flex-col  py-2 md:px-5 px-3 rounded-full md:w-72 w-48'>
+        <p>{name}</p>
+
+        <span className='flex flex-row w-full md:w-64'>
+          <p className='text-white ml-2'>{designation} of</p>
+          
+          <p className='text-text-yellow ml-2'>{company}</p>
+
+        </span>
+
+      </span>
+      {/* <img src={image}
+        alt="image" className='md:w-12 md:h-12 h-8 w-8 rounded-full  '>
+
+      </img> */}
+    </div>
+
+    <p className='text-gray-600 font-black text-[48px]'>"</p>
 
     <div className='mt-1'>
-      <p className='text-white tracking-wider text-[18px]'>{testimonial}</p>
+      <p className='text-primary tracking-wider text-[18px]'>{testimonial}</p>
 
-      <div className='mt-7 flex justify-between items-center gap-1'>
-        <div className='flex-1 flex flex-col'>
-          <p className='text-white font-medium text-[16px]'>
-            <span className='blue-text-gradient'>@</span> {name}
-          </p>
-          <p className='mt-1 text-secondary text-[12px]'>
-            {designation} of {company}
-          </p>
-        </div>
 
-        <img
-          src={image}
-          alt={`feedback_by-${name}`}
-          className='w-10 h-10 rounded-full object-cover'
-        />
-      </div>
     </div>
   </motion.div>
 );
 
 const Feedbacks = () => {
   return (
-    <div className={`mt-12 bg-[url('/graybg.svg')] bg-cover bg-center bg-primary rounded-[20px]`}>
+    <div className={`mt-12  bg-primary rounded-[20px]`}>
       <div
         className={`   rounded-2xl ${styles.padding} min-h-[300px]`}
       >

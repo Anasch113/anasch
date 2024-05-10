@@ -5,9 +5,11 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
-import { projects } from "../constants";
+import { projects } from "../constants/projects"
 import { fadeIn, textVariant } from "../utils/motion";
 import { IoIosLink } from "react-icons/io";
+import { BsInfoLg } from "react-icons/bs";
+import { useState } from "react";
 
 
 const ProjectCard = ({
@@ -16,17 +18,21 @@ const ProjectCard = ({
   description,
   techs,
   image,
-  source_code_link,
-  bgColor
+  visit_link,
+  bgColor,
+  worksOn
 }) => {
+
+  const [showBox, setShowBox] = useState(false);
+
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-      <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
+    <div >
+      <div
+        // options={{
+        //   max: 45,
+        //   scale: 1,
+        //   speed: 450,
+        // }}
         className={`flex gap-5 ${bgColor} p-5 rounded-2xl sm:w-full w-full sm:min-h-[400px]`}
       >
 
@@ -39,34 +45,49 @@ const ProjectCard = ({
               className=' object-cover rounded-2xl '
               style={{ width: '100%', height: '100%' }}
             />
+            
+        {/* <div className="absolute inset-0 bg-gray-300 opacity-50 -z-10 rounded-2xl"></div> */}
           </div>
 
           {/* Overlay */}
-          <div className="absolute inset-0 bg-gray-300 opacity-50 -z-10 rounded-2xl"></div>
+        
 
 
-          <div className='absolute inset-0 flex  m-3 card-img_hover z'>
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
-            >
-              <img
-                src={github}
-                alt='source code'
-                className='w-1/2 h-1/2 object-contain'
-              />
-            </div>
-          </div>
         </div>
 
-
         {/* 2nd part */}
-        <div className="p-3 flex flex-col gap-5">
+        <div className="relative p-3 flex flex-col gap-5">
 
           <div className='mt-5'>
-            <h3 className='text-white font-bold text-[24px]'>{name}</h3>
-            <p className='mt-2 text-white text-[14px]'>{description}</p>
+            <h3 className='text-white font-bold text-3xl'>{name}</h3>
+            {/* <p className='mt-2 text-white text-[14px]'>{description}</p> */}
+            <span className="flex flex-col gap-3 p-3">
+              <p className="my-1 font-md ">Worked on</p>
+
+              <div className="flex gap-1 flex-wrap font-roboto">{worksOn.map((feature, i) =>
+                <button className="glass-button-3" key={i} >{feature}</button>
+              )}</div>
+            </span>
+
           </div>
+          {/* Info div */}
+          <div className="absolute inset-0 flex justify-end "
+          >
+            <span
+              onMouseEnter={() => setShowBox(true)}
+              onMouseLeave={() => setShowBox(false)}
+              className="flex items-center text-2xl w-10 h-10 bg-white p-3 rounded-full text-black"
+            >
+              <BsInfoLg size={30} />
+            </span>
+            {showBox && (
+              <div className="info-box">
+                {/* Your text content goes here */}
+                {description}
+              </div>
+            )}
+          </div>
+
 
           <div className='w-full flex flex-wrap p-2 gap-4  '>
 
@@ -81,28 +102,28 @@ const ProjectCard = ({
             }
 
           </div>
-          <button className="glass-button-2">
+          <a href={visit_link} target="_main" className="glass-button-2">
             <span className="w-full flex items-center justify-center gap-2">
               <IoIosLink />
-              <p>Visit</p>
+              <p>Go To {name}</p>
             </span>
-          </button>
+          </a>
         </div>
-      </Tilt>
-    </motion.div>
+      </div>
+    </div>
   );
 };
 
 const Works = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <div variants={textVariant()}>
         <p className={`${styles.sectionSubText} `}>My work</p>
         <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
-      </motion.div>
+      </div>
 
       <div className='w-full flex'>
-        <motion.p
+        <div
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-3 text-white text-[17px] max-w-3xl leading-[30px]'
         >
@@ -111,7 +132,7 @@ const Works = () => {
           links to code repositories and live demos in it. It reflects my
           ability to solve complex problems, work with different technologies,
           and manage projects effectively.
-        </motion.p>
+        </div>
       </div>
 
       <div className='mt-20 flex flex-col gap-7 w-full'>

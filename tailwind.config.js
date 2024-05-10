@@ -30,7 +30,13 @@ module.exports = {
       },
       textColor: {
         "text-yellow": "#FDB827"
-      }
+      },
+      
+      fontFamily: {
+        'poppins': ['Poppins', 'sans-serif'],
+        'roboto': ['Roboto', 'sans-serif'],
+        
+      },
     },
   },
   plugins: [],

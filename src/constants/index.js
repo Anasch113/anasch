@@ -2,8 +2,7 @@ import {
   mobile,
   backend,
   creator,
-  arcsports,
-  iNoteCloud,
+ 
   web,
   javascript,
 
@@ -14,26 +13,38 @@ import {
   tailwind,
   nodejs,
   mongodb,
+  paypal,
+  strapi,
+  stripe,
   git,
   figma,
   docker,
-
-
-  ugc,
-
   fiverr,
 
   pgc,
 
-  voiceup,
+  
 
   threejs,
   codsoft,
-  codeh7,
-  netflix,
+ 
   edu1,
+  assemblyai,
+  elementor,
+  firebase,
+  gpt,
+  nextjs,
+  openapi,
+  wordpress,
   webdesign,
-  pgc1
+  pgc1,
+  captify,
+  CarRental,
+  cicada,
+  sitaawards,
+  soundtik,
+  webixstore,
+  nextjsadmin
 
 } from "../assets";
 import {
@@ -201,8 +212,8 @@ const testimonials = [
       "During the whole contract, We found Anas consistent and hardworking. We wish to work with him in future",
     name: "Mr Sandip Govit",
     designation: "Founder",
-    company: "Techno Hacks Official",
-    image: "https://media.licdn.com/dms/image/D5603AQHFnlmXbgX7xQ/profile-displayphoto-shrink_800_800/0/1672054915990?e=1700697600&v=beta&t=Lixk8NYqq42kjF6JfnNGN7EvUV1shGLb-n4X5YgTcS8",
+    company: "Techno Hacks",
+    image: "",
   },
   // {
   //   testimonial:
@@ -214,150 +225,7 @@ const testimonials = [
   // },
 ];
 
-const projects = [
-  {
-    name: "PGC-HUB",
-    description:
-      "PGC HUB is an online educational and student management platform made by only me. This website is full full-fledged backend website that contains many awesome features. It also has an attractive GUI and is responsive",
-      techs: [
-        {
-          name: "HTML 5",
-          icon: html,
-        },
-        {
-          name: "CSS 3",
-          icon: css,
-        },
-        {
-          name: "JavaScript",
-          icon: javascript,
-        },
-  
-        {
-          name: "React JS",
-          icon: reactjs,
-        },
-        {
-          name: "Tailwind CSS",
-          icon: tailwind,
-        },
-        {
-          name: "Node JS",
-          icon: nodejs,
-        },
-        {
-          name: "MongoDB",
-          icon: mongodb,
-        },
-  
-      ],
-    image: pgc1,
-    source_code_link: "https://github.com/Anasch113/CODSOFT/tree/main/pgc-hub-project",
-    bgColor: 'bg-blue-500',
-  },
- 
-  
-  {
-    name: "EduTech",
-    description:
-      "A beautiful modern animated landing page made from Bootstrap 5, Jquery in addition to HTML, CSS and javascript.",
-    techs: [
-      {
-        name: "HTML 5",
-        icon: html,
-      },
-      {
-        name: "CSS 3",
-        icon: css,
-      },
-      {
-        name: "JavaScript",
-        icon: javascript,
-      },
 
-      {
-        name: "React JS",
-        icon: reactjs,
-      },
-      {
-        name: "Figma",
-        icon: figma,
-      },
-
-    ],
-    image: edu1,
-    source_code_link: "https://github.com/Anasch113/TechnoHacks-Intern/tree/main/Registration-Form/src",
-    bgColor: 'bg-blue-400',
-  },
-  
-  
-  {
-    name: "Shopix",
-    description:
-      "A modern full dynamic e-commerce application that holds all the functionalities of e-commerce website.",
-      techs: [
-        {
-          name: "HTML 5",
-          icon: html,
-        },
-        {
-          name: "CSS 3",
-          icon: css,
-        },
-        {
-          name: "JavaScript",
-          icon: javascript,
-        },
-  
-        {
-          name: "React JS",
-          icon: reactjs,
-        },
-  
-        {
-          name: "Nodejs",
-          icon: nodejs,
-        },
-        {
-          name: "Tailwind CSS",
-          icon: tailwind,
-        },
-  
-      ],
-    image: webdesign,
-    source_code_link: "https://github.com/Anasch113/Shopix.Mern.client",
-    bgColor: 'bg-purple-700',
-  },
- 
-  {
-    name: "iNoteCloud",
-    description:
-      "MERN Stack application in which user can create account and then add, edit, delete and save notes in it's own account. ",
-    techs: [
-      {
-        name: "HTML 5",
-        icon: html,
-      },
-      {
-        name: "CSS 3",
-        icon: css,
-      },
-      {
-        name: "JavaScript",
-        icon: javascript,
-      },
-
-      {
-        name: "React JS",
-        icon: reactjs,
-      },
-
-    ],
-    image: iNoteCloud,
-    source_code_link: "https://github.com/Anasch113/Shopix.Mern.client",
-    bgColor: 'bg-gray-200',
-  }
-];
 
 const socialLinks = [
   {
@@ -377,4 +245,4 @@ const socialLinks = [
 
 
 
-export { services, technologies, experiences, testimonials, projects, socialLinks };
+export { services, technologies, experiences, testimonials, socialLinks };
