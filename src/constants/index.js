@@ -2,7 +2,7 @@ import {
   mobile,
   backend,
   creator,
- 
+
   web,
   javascript,
 
@@ -23,11 +23,11 @@ import {
 
   pgc,
 
-  
+  typescript,
 
   threejs,
   codsoft,
- 
+
   edu1,
   assemblyai,
   elementor,
@@ -44,8 +44,12 @@ import {
   sitaawards,
   soundtik,
   webixstore,
-  nextjsadmin
-
+  nextjsadmin,
+  woocommerce,
+  express,
+  nginx,
+  postman,
+  technohacks
 } from "../assets";
 import {
   FaFacebookF,
@@ -69,18 +73,12 @@ export const navLinks = [
 ];
 
 const services = [
+
   {
-    title: "Frontend Developer",
-    icon: web,
-  },
-  {
-    title: "Full Stack Developer",
+    title: "Full Stack Web Developer",
     icon: mobile,
   },
-  {
-    title: "Web Designer",
-    icon: backend,
-  },
+
   {
     title: "Wordpress Developer",
     icon: creator,
@@ -100,10 +98,18 @@ const technologies = [
     name: "JavaScript",
     icon: javascript,
   },
+  {
+    name: "TypeScript",
+    icon: typescript,
+  },
 
   {
     name: "React JS",
     icon: reactjs,
+  },
+  {
+    name: "Nextjs",
+    icon: nextjs,
   },
   {
     name: "Redux Toolkit",
@@ -118,9 +124,64 @@ const technologies = [
     icon: nodejs,
   },
   {
+    name: "Express",
+    icon: express,
+  },
+  {
     name: "MongoDB",
     icon: mongodb,
   },
+  {
+    name: "Firebase",
+    icon: firebase,
+  },
+  {
+    name: "Strapi",
+    icon: strapi,
+  },
+
+  {
+    name: "Stripe",
+    icon: stripe,
+  },
+  {
+    name: "Paypal",
+    icon: paypal,
+  },
+  {
+    name: "Assembly AI",
+    icon: assemblyai,
+  },
+  {
+    name: "Open API",
+    icon: openapi,
+  },
+
+  {
+    name: "GPT Integration",
+    icon: gpt,
+  },
+  {
+    name: "Postman",
+    icon: postman,
+  },
+  {
+    name: "Nginx",
+    icon: nginx,
+  },
+  {
+    name: "WordPress",
+    icon: wordpress,
+  },
+  {
+    name: "Elementor",
+    icon: elementor,
+  },
+  {
+    name: "WooCommerce",
+    icon: woocommerce
+  },
+
   {
     name: "Three JS",
     icon: threejs,
@@ -142,34 +203,25 @@ const technologies = [
 const experiences = [
   {
     title: "Full Stack Developer ",
-    company_name: "fiverr",
+    company_name: "Fiverr",
     icon: fiverr,
     iconBg: "#383E56",
-    date: "March 2021- Present",
+    date: "January 2022 - Present",
     points: [
 
-      "As a seasoned freelance Full Stack Developer with a strong Fiverr existence, I've had the pleasure of creating appealing digital experiences for clients all over the world.",
-      " My journey has been distinguished by excellence in web development, since I have a passion for merging efficiency and performance .",
-      "Over 3+ years, I've honed my skills in HTML5, CSS(Tailwind CSS, Bootstrap 5, SCSS), JavaScript (Reactjs, Nextjs, Nodejs ) to create powerfull and responsive applications.",
-      " Each project on Fiverr has been an opportunity to showcase my dedication to delivering pixel-perfect, user-friendly applications that exceed client expectations."
+      "Developed and deployed 10+ successful freelance projects using MERN stack, Next.js, Firebase.",
+      " Designed and implemented RESTful APIs using OpenAPI and other API's to add AI functionalities to applications.",
+      " Utilized AssemblyAI for speech-to-text transcription and natural language processing in applications.",
+      "Implemented responsive and mobile-first design principles using CSS frameworks like Tailwind CSS",
+      " Hosted applications on VPS using web servers like Nginx",
+      "Optimized application performance and improved code"
     ],
   },
-  // {
-  //   title: "Full Stack Developer",
-  //   company_name: "PGC",
-  //   icon: pgc,
-  //   iconBg: "#383E56",
-  //   date: "Jan 2021 - present",
-  //   points: [
-  //     "PGC-HUB, a full-fledged web application, was created by me at PGC. I am in charge of maintaining and updating this website. In addition, I use my skill set to create new online applications. This is the platform that allows me to improve my talents and gain market experience.",
 
-
-  //   ],
-  // },
   {
     title: "Frontend Developer",
-    company_name: "Scale It More",
-    icon: "https://scaleitmore.in/wp-content/uploads/2022/12/cropped-Untitled_design__9_-removebg-preview.png",
+    company_name: "Techno Hacks",
+    icon: technohacks,
     iconBg: "#E6DEDD",
     date: "May 2023 - July 2023",
     points: [
@@ -199,20 +251,37 @@ const experiences = [
 ];
 
 const testimonials = [
-  {
-    testimonial:
-      "Anas has the ability to convert the ideas into reality with his excellent development skills",
-    name: "Prof. Allah Nawaz",
-    designation: "GM",
-    company: "PGC",
-    image: pgc,
-  },
+
   {
     testimonial:
       "During the whole contract, We found Anas consistent and hardworking. We wish to work with him in future",
     name: "Mr Sandip Govit",
-    designation: "Founder",
+    designation: "CEO of",
     company: "Techno Hacks",
+    image: "",
+  },
+  {
+    testimonial:
+      "Anas is very good programmer and his development skills are awesome. He provided best delivery of the project",
+    name: "Olamilekan",
+    designation: "Fiverr",
+    company: "Client",
+    image: "",
+  },
+  {
+    testimonial:
+      "He provided the fast and amazing delivery of our project. ",
+    name: "Odulana Hammed",
+    designation: "Fiverr",
+    company: "Client",
+    image: "",
+  },
+  {
+    testimonial:
+      "Fantastic work. Anas is a good communicator and very professional.I would recommend him highly to anyone in need of his services.",
+    name: "Fahad Hashim",
+    designation: "Fiverr",
+    company: "Client",
     image: "",
   },
   // {

@@ -22,8 +22,9 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
-import codsoft from "../assets/codsoft.png"
+import codsoft from "../assets/codsoft.jpg"
 import edu1 from "../assets/edu1.png"
+import technohacks from "../assets/technohacks.jpg"
 
 
 import assemblyai from "../assets/tech/assemblyai.png"
@@ -37,6 +38,10 @@ import paypal from "../assets/tech/paypal.png"
 import strapi from "../assets/tech/strapi.png"
 import stripe from "../assets/tech/stripe.png"
 import woocommerce from "../assets/tech/woocommerce.png"
+import express from "../assets/tech/express.png"
+import nginx from "../assets/tech/nginx.png"
+import postman from "../assets/tech/postman.png"
+
 
 //projects
 
@@ -96,5 +101,10 @@ export {
   soundtik,
   webixstore,
   nextjsadmin,
-  woocommerce
+  woocommerce,
+  express,
+  nginx,
+  postman,
+  technohacks
+  
 };

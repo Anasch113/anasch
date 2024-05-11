@@ -47,11 +47,7 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        I'm a skilled web developer with experience in HTML,CSS and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js. Moreover I also have an experience in CMS Strapi and NoSql databases like MongoDB. I'm a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life!
+       A passionate full stack web developer with over 2.5+ years of experience in crafting the web solutions for online business. My expertise lies in leveraging cutting-edge technologies like ReactJS, Nextjs, NodeJS, ExpressJS and various third party API integrations like OpenAPI, REST Api, Web Api, AssemblyAI, PayPal & Stripe integartions etc. I am proficient in implementing responsive and mobile-first design principles using CSS frameworks like Tailwind CSS. In addition, I am also known to write clean and well structure code to enhance the overall maintainablity of projects. Using web servers like Nginx, I can deploy full stack apps on Virtual Private Servers (VPS) as part of my production expertise. Moreover I developed many Marketplace Solutions like Captify, SoundTik, CicadaAI, Sita Awards, EHR African Pathway and Celebrity Sprinter, I'm devoted to push the limits of web development in order to produce exceptional digital solutions.
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>

@@ -2,6 +2,8 @@ import React from 'react'
 import { RiArrowRightDoubleLine } from "react-icons/ri";
 import { experiences } from '../constants';
 import { TiLocationArrowOutline } from "react-icons/ti";
+import { MdOutlineDateRange } from "react-icons/md";
+import { PiPaperPlaneRightLight } from "react-icons/pi";
 
 const NewExperience = () => {
 
@@ -29,14 +31,15 @@ const NewExperience = () => {
 
                                         </img>
                                         <span className='flex flex-col'>
-                                            <p className='text-text-yellow ml-2'>{experience.company_name}</p>
+                                            <p className='text-text-yellow font-bold ml-2 text-lg'>{experience.company_name}</p>
                                             <p className='text-white ml-2'>Remote</p>
                                         </span>
 
                                     </span>
 
-                                    <span className='bg-yellow-200 md:h-12 h-12 px-5 font-medium rounded-full md:min-w-[100px] w-48 flex md:py-4 items-center text-center max-[500px]:text-sm'>
-                                        <p> {experience.date}</p>
+                                    <span className='bg-yellow-200 md:h-12 h-12 px-5 font-bold rounded-full md:min-w-[250px] min-w-48 flex md:py-4 items-center max-[500px]:text-sm gap-2'>
+                                        <MdOutlineDateRange size={20}/>
+                                        <p className='text-center'> {experience.date}</p>
                                        
                                     </span>
                                 </div>
@@ -46,11 +49,11 @@ const NewExperience = () => {
                                     <h2 className='text-2xl font-bold'>{experience.title}</h2>
                                 </div>
 
-                                <div className='flex flex-col gap-4  '>
+                                <div className='flex flex-col gap-4 p-4 '>
                                     {
                                         experience.points.map((point, index) => (
                                             <span key={index} className='flex flex-row items-center gap-2 '>
-                                                <TiLocationArrowOutline size={20} />
+                                                <PiPaperPlaneRightLight size={20} />
                                                 <p> {point}</p>
 
 

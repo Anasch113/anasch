@@ -16,7 +16,7 @@ const Hero = () => {
           
             <div className="flex items-center flex-col py-2 gap-2">
               <p className="text-2xl"> A Full Stack Web Developer</p>
-              <p className="text-lg">with <span className="glass-button">2.5+ years</span> of Expericence</p>
+              <p className="text-lg">with <span className="glass-button">2.5+ years</span> of Experience</p>
              <div className="flex gap-4">
 
              <button className="px-5 py-2 mt-5 rounded-full text-text-yellow border-2 border-fourth">Resume</button>

@@ -19,13 +19,13 @@ const FeedbackCard = ({
     className='bg-white  p-10 rounded-3xl xs:w-[320px] w-full '
   >
     <div className="w-full justify-center flex ">
-      <span className='bg-tertiary flex flex-col  py-2 md:px-5 px-3 rounded-full md:w-72 w-48'>
-        <p>{name}</p>
+      <span className=' text-tertiary flex items-center justify-center flex-col gap-1  py-2 md:px-5 px-3 rounded-full md:w-72 w-48'>
+        <p className="text-center font-bold text-xl">{name}</p>
 
-        <span className='flex flex-row w-full md:w-64'>
-          <p className='text-white ml-2'>{designation} of</p>
-          
-          <p className='text-text-yellow ml-2'>{company}</p>
+        <span className='flex flex-row gap-1 w-full justify-center  text-sm md:w-64 '>
+          <p className='text-gray-500  '>{designation}</p>
+        
+          <p className='text-gray-500   '>{company}</p>
 
         </span>
 
