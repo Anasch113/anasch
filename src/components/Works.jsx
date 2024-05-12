@@ -33,24 +33,24 @@ const ProjectCard = ({
         //   scale: 1,
         //   speed: 450,
         // }}
-        className={`flex gap-5 ${bgColor} p-5 rounded-2xl sm:w-full w-full sm:min-h-[400px]`}
+        className={`flex gap-5 ${bgColor} p-5 rounded-2xl  w-full md:min-h-[400px] md:flex-row flex-col`}
       >
 
         {/* 1st part */}
-        <div className='flex items-center relative p-3  h-[400px] rounded-2xl'>
-          <div className=" w-[500px] h-[320px] z-0">
+        <div className='flex items-center relative p-3  md:h-[400px] rounded-2xl'>
+          <div className=" md:w-[500px] md:h-[320px] h-[200px] z-0">
             <img
               src={image}
               alt='project_image'
               className=' object-cover rounded-2xl '
               style={{ width: '100%', height: '100%' }}
             />
-            
-        {/* <div className="absolute inset-0 bg-gray-300 opacity-50 -z-10 rounded-2xl"></div> */}
+
+            {/* <div className="absolute inset-0 bg-gray-300 opacity-50 -z-10 rounded-2xl"></div> */}
           </div>
 
           {/* Overlay */}
-        
+
 
 
         </div>
@@ -64,7 +64,7 @@ const ProjectCard = ({
             <span className="flex flex-col gap-3 p-3">
               <p className="my-1 font-md ">Worked on</p>
 
-              <div className="flex gap-1 flex-wrap font-roboto">{worksOn.map((feature, i) =>
+              <div className="flex gap-2 flex-wrap font-roboto">{worksOn.map((feature, i) =>
                 <button className="glass-button-3" key={i} >{feature}</button>
               )}</div>
             </span>
@@ -88,14 +88,14 @@ const ProjectCard = ({
             )}
           </div>
 
-
-          <div className='w-full flex flex-wrap p-2 gap-4  '>
+          <p className="my-1 font-md ">Skills I Used</p>
+          <div className='w-full flex-wrap   flex  p-1 gap-4  '>
 
 
             {
               techs.map((tech, index) => (
-                <span key={index} className='flex items-center justify-center gap-3  px-5 py-1 rounded-full bg-white '>
-                  <img className='w-8 h-10' src={tech.icon} alt="html" />
+                <span key={index} className='flex items-center justify-center md:gap-3 gap-1  px-5 py-1 rounded-full bg-white '>
+                  <img className='md:w-10 md:h-10  h-8 w-8' src={tech.icon} alt="html" />
                   <p className='text-black-100 font-semibold  '>{tech.name}</p>
                 </span>
               ))
@@ -125,7 +125,7 @@ const Works = () => {
       <div className='w-full flex'>
         <div
           variants={fadeIn("", "", 0.1, 1)}
-          className='mt-3 text-white text-[17px] max-w-3xl leading-[30px]'
+          className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
           Following projects showcases my skills and experience through
           real-world examples of my work. Each project is briefly described with

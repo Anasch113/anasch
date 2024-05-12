@@ -49,7 +49,11 @@ import {
   express,
   nginx,
   postman,
-  technohacks
+  technohacks,
+  instagram,
+  linkedin,
+  facebook,
+  github,
 } from "../assets";
 import {
   FaFacebookF,
@@ -298,17 +302,25 @@ const testimonials = [
 
 const socialLinks = [
   {
-    image: FaLinkedinIn,
-    source_code_link: "https://chat.openai.com/"
+    name: "Linkedin",
+    icon: linkedin,
+    link: "https://www.linkedin.com/in/anas-ch-b0877a263"
   },
   {
-    image: FaTwitter,
-    source_code_link: "https://www.canva.com/"
+    name: "Facebook",
+    icon: facebook,
+    link: "https://www.facebook.com/profile.php?id=61553583324091"
 
   },
   {
-    image: FaInstagram,
-    source_code_link: "https://github.com/Anasch113"
+    name: "Instagram",
+    icon: instagram,
+    link: "https://www.instagram.com/webix_info/"
+  },
+  {
+    name: "Github",
+    icon: github,
+    link: "https://github.com/Anasch113"
   }
 ]
 

@@ -25,6 +25,10 @@ import threejs from "./tech/threejs.svg";
 import codsoft from "../assets/codsoft.jpg"
 import edu1 from "../assets/edu1.png"
 import technohacks from "../assets/technohacks.jpg"
+import instagram from "../assets/instagram.png"
+import linkedin from "../assets/linkedin.png"
+import facebook from "../assets/facebook.png"
+import email from "../assets/email.png"
 
 
 import assemblyai from "../assets/tech/assemblyai.png"
@@ -105,6 +109,10 @@ export {
   express,
   nginx,
   postman,
-  technohacks
+  technohacks,
+  instagram,
+  linkedin,
+  facebook,
+
   
 };

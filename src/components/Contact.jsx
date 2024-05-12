@@ -67,11 +67,11 @@ const Contact = () => {
 
   return (
     <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden items-center justify-center`}
+      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden items-center justify-center px-2`}
     >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className='flex-[0.75] bg-white p-8 rounded-3xl justify-center '
+        className='md:flex-[0.75] w-full bg-white p-8 rounded-3xl justify-center '
       >
 
         <p className="sm:text-[18px] text-[14px] text-gray-dark uppercase tracking-wider">Get in touch</p>
@@ -83,8 +83,8 @@ const Contact = () => {
           className='mt-12 relative flex flex-col gap-8 w-full'
         >
 
-          <div className="flex flex-row w-full gap-2">
-            <label className='flex flex-col w-2/4'>
+          <div className="flex md:flex-row flex-col w-full gap-2">
+            <label className='flex flex-col md:w-2/4 w-full'>
               <span className='text-black-100 font-medium mb-4'>Your Email</span>
               <input
                 type='email'
@@ -95,7 +95,7 @@ const Contact = () => {
                 className='bg-white-100 border py-4 px-6 placeholder:text-gray-500 text-black-100 rounded-full outline-none  font-medium'
               />
             </label>
-            <label className='flex flex-col w-2/4'>
+            <label className='flex flex-col md:w-2/4 w-full'>
               <span className='text-black-100 font-medium mb-4'>Your name</span>
               <input
                 type='text'
@@ -109,8 +109,8 @@ const Contact = () => {
           </div>
 
 
-          <div className="flex flex-row w-full gap-2">
-            <label className='flex flex-col w-2/4'>
+          <div className="flex md:flex-row flex-col w-full gap-2">
+            <label className='flex flex-col md:w-2/4 w-full'>
               <span className='text-black-100 font-medium mb-4'>Mobile Number</span>
               <input
                 type='number'
@@ -121,7 +121,7 @@ const Contact = () => {
                 className='bg-white-100 border py-4 px-6 placeholder:text-gray-500 text-black-100 rounded-full outline-none  font-medium'
               />
             </label>
-            <label className='flex flex-col w-2/4'>
+            <label className='flex flex-col md:w-2/4 w-full'>
               <span className='text-black-100 font-medium mb-4'>Subject</span>
               <input
                 type='text'
@@ -158,18 +158,13 @@ const Contact = () => {
 
           </button>
         </form>
-        <div className="absolute top-[580px] left-[600px]  z-50 ">
-          <img className="w-60 h-60" src="/3d-laptop-boy.png" alt="" />
+        <div className="absolute md:top-[580px] max-[1000px]:hidden md:left-[600px]  z-50 ">
+          <img className="md:w-60 md:h-60" src="/3d-laptop-boy.png" alt="" />
         </div>
 
       </motion.div>
 
-      {/* <motion.div
-        variants={slideIn("right", "tween", 0.2, 1)}
-        className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
-      >
-        <EarthCanvas />
-      </motion.div> */}
+     
     </div>
   );
 };

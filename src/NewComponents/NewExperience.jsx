@@ -23,9 +23,9 @@ const NewExperience = () => {
                             <div key={index} className={`${index === 1 && "bg-[url('/blurrybg.svg')] bg-cover bg-center bg-gray-200"} w-full md:w-2/3 text-gray-900 justify-center  rounded-3xl bg-white min-h-[400px] gap-4 p-5 `}>
 
 
-                                <div className='flex md:justify-between max-[500px]:gap-2 max-[500px]:flex-col'>
+                                <div className='flex md:justify-between max-[500px]:gap-4 max-[500px]:flex-col'>
 
-                                    <span className='bg-tertiary flex  items-center py-1 md:px-3 px-3 rounded-full md:w-64 w-48'>
+                                    <span className='bg-tertiary flex  items-center py-1 md:px-3 px-3 rounded-full md:w-64 min-w-[192px]'>
                                         <img src={experience.icon}
                                             alt={experience.company_name} className='md:w-12 md:h-12 h-8 w-8 rounded-full  '>
 
@@ -37,7 +37,7 @@ const NewExperience = () => {
 
                                     </span>
 
-                                    <span className='bg-yellow-200 md:h-12 h-12 px-5 font-bold rounded-full md:min-w-[250px] min-w-48 flex md:py-4 items-center max-[500px]:text-sm gap-2'>
+                                    <span className='bg-yellow-200  h-12 px-5 font-bold rounded-full md:min-w-[250px] w-72  flex md:py-4 items-center max-[500px]:text-sm gap-2'>
                                         <MdOutlineDateRange size={20}/>
                                         <p className='text-center'> {experience.date}</p>
                                        

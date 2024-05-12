@@ -10,11 +10,11 @@ const NewTechs = () => {
                 <div className='  flex items-center  w-full  flex-col p-5 '>
 
 
-                    <h2 className='text-text-yellow text-3xl font-medium my-5'>Technologies I Use</h2>
+                    <h2 className='text-text-yellow md:text-3xl text-2xl font-medium my-5'>Technologies I Use</h2>
 
 
                     {/* skills div */}
-                    <div className='w-full flex flex-wrap px-10 py-5 gap-4 justify-center '>
+                    <div className='w-full flex flex-wrap md:px-10 py-5 gap-4 justify-center '>
 
                         {
                             technologies.map((tech, index) => (
