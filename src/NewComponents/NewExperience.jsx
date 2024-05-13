@@ -37,7 +37,7 @@ const NewExperience = () => {
 
                                     </span>
 
-                                    <span className='bg-yellow-200  h-12 px-5 font-bold rounded-full md:min-w-[250px] w-72  flex md:py-4 items-center max-[500px]:text-sm gap-2'>
+                                    <span className='bg-yellow-200  h-12 px-5 font-bold rounded-full md:min-w-[250px] min-w-[288px]  flex md:py-4 items-center max-[500px]:text-sm gap-2'>
                                         <MdOutlineDateRange size={20}/>
                                         <p className='text-center'> {experience.date}</p>
                                        

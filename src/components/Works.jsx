@@ -28,11 +28,11 @@ const ProjectCard = ({
   return (
     <div >
       <div
-        // options={{
-        //   max: 45,
-        //   scale: 1,
-        //   speed: 450,
-        // }}
+        options={{
+          max: 45,
+          scale: 1,
+          speed: 450,
+        }}
         className={`flex gap-5 ${bgColor} p-5 rounded-2xl  w-full md:min-h-[400px] md:flex-row flex-col`}
       >
 
@@ -144,4 +144,4 @@ const Works = () => {
   );
 };
 
-export default SectionWrapper(Works, "");
+export default SectionWrapper(Works, "work");

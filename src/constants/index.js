@@ -221,24 +221,6 @@ const experiences = [
       "Optimized application performance and improved code"
     ],
   },
-
-  {
-    title: "Frontend Developer",
-    company_name: "Techno Hacks",
-    icon: technohacks,
-    iconBg: "#E6DEDD",
-    date: "May 2023 - July 2023",
-    points: [
-      "Developing and maintaining web applications using front-end libraries and other related technologies.",
-      ,
-
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers."
-
-    ],
-  },
-
-
   {
     title: "Full stack Developer",
     company_name: "CodSoft India",
@@ -252,6 +234,24 @@ const experiences = [
       "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
+  {
+    title: "Frontend Developer",
+    company_name: "Techno Hacks",
+    icon: technohacks,
+    iconBg: "#E6DEDD",
+    date: "April 2023 - june 2023",
+    points: [
+      "Develop and design attractive landing pages, contact forms, Login/Signup Pages and other frontend work.  ",
+      ,
+
+      "Implementing responsive design and enured smooth responsiveness on all devices",
+      "Added amazing and attractive animations to websites using framer motion, wow.js, animateCSS and other animations tools. "
+
+    ],
+  },
+
+
+ 
 ];
 
 const testimonials = [

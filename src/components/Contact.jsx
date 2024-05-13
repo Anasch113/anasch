@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
 import { styles } from "../styles";
-import { EarthCanvas } from "./canvas";
+
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 import { VscSend } from "react-icons/vsc";
@@ -13,6 +13,8 @@ const Contact = () => {
   const [form, setForm] = useState({
     name: "",
     email: "",
+    phone: "",
+    subject: "",
     message: "",
   });
 
@@ -41,7 +43,11 @@ const Contact = () => {
         to_name: "Anas Ch",
         from_email: form.email,
         to_email: "anaschaudry2002@gmail.com",
-        message: form.message,
+        message: `
+        Email: ${form.email}
+        Phone: ${form.phone},
+        Subject: ${form.subject},
+        Message: ${form.message}`,
       },
       '6w4SVYXj59ECt3KUR'
     )
@@ -88,8 +94,8 @@ const Contact = () => {
               <span className='text-black-100 font-medium mb-4'>Your Email</span>
               <input
                 type='email'
-                name='name'
-                value={form.name}
+                name='email'
+                value={form.email}
                 onChange={handleChange}
                 placeholder="What's your email address?"
                 className='bg-white-100 border py-4 px-6 placeholder:text-gray-500 text-black-100 rounded-full outline-none  font-medium'
@@ -99,8 +105,8 @@ const Contact = () => {
               <span className='text-black-100 font-medium mb-4'>Your name</span>
               <input
                 type='text'
-                name='email'
-                value={form.email}
+                name='name'
+                value={form.name}
                 onChange={handleChange}
                 placeholder="What's your good name?"
                 className='bg-white-100 border py-4 px-6 placeholder:text-gray-500 text-black-100 rounded-full outline-none  font-medium'
@@ -115,7 +121,7 @@ const Contact = () => {
               <input
                 type='number'
                 name='phone'
-                value={form.name}
+                value={form.phone}
                 onChange={handleChange}
                 placeholder="Phone Number"
                 className='bg-white-100 border py-4 px-6 placeholder:text-gray-500 text-black-100 rounded-full outline-none  font-medium'
@@ -126,7 +132,7 @@ const Contact = () => {
               <input
                 type='text'
                 name='subject'
-                value={form.email}
+                value={form.subject}
                 onChange={handleChange}
                 placeholder="Subject"
                 className='bg-white-100 border py-4 px-6 placeholder:text-gray-500 text-black-100 rounded-full outline-none  font-medium'
@@ -164,7 +170,7 @@ const Contact = () => {
 
       </motion.div>
 
-     
+
     </div>
   );
 };
