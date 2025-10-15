@@ -206,49 +206,34 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Full Stack Developer ",
+    title: "Full Stack Developer | Level 2 Seller",
     company_name: "Fiverr",
     icon: fiverr,
     iconBg: "#383E56",
     date: "January 2022 - Present",
     points: [
 
-      "Developed and deployed 10+ successful freelance projects using MERN stack, Next.js, Firebase.",
+      "Developed and deployed 10+ successful freelance projects using MERN stack, Next.js, Python, Flask Firebase.",
       " Designed and implemented RESTful APIs using OpenAPI and other API's to add AI functionalities to applications.",
-      " Utilized AssemblyAI for speech-to-text transcription and natural language processing in applications.",
       "Implemented responsive and mobile-first design principles using CSS frameworks like Tailwind CSS",
       " Hosted applications on VPS using web servers like Nginx",
       "Optimized application performance and improved code"
     ],
   },
   {
-    title: "Full stack Developer",
-    company_name: "CodSoft India",
+    title: "Senior Software Engineer",
+    company_name: "Xavinex",
     icon: codsoft,
     iconBg: "#E6DEDD",
-    date: "june 2023 - September 2023",
+    date: "September 2024 - Present",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
       "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Participating in code reviews and providing constructive feedback to other junior developers.",
     ],
   },
-  {
-    title: "Frontend Developer",
-    company_name: "Techno Hacks",
-    icon: technohacks,
-    iconBg: "#E6DEDD",
-    date: "April 2023 - june 2023",
-    points: [
-      "Develop and design attractive landing pages, contact forms, Login/Signup Pages and other frontend work.  ",
-      ,
-
-      "Implementing responsive design and enured smooth responsiveness on all devices",
-      "Added amazing and attractive animations to websites using framer motion, wow.js, animateCSS and other animations tools. "
-
-    ],
-  },
+  
 
 
  
@@ -256,6 +241,46 @@ const experiences = [
 
 const testimonials = [
 
+  {
+    testimonial:
+      "Anasch truly EXCELLED in AI development, impressing me with their remarkable attention to details and consistently looking for better functioning solution. Working with him was a breeze due to the great level of cooperation and proactive communication. Highly recommend! 👍",
+    name: "Paul",
+    designation: "Fiverr",
+    company: "Client",
+    image: "",
+  },
+  {
+    testimonial:
+      "Easy to work with and a great at explaining things that work in the application",
+    name: "Hary Ruiz",
+    designation: "Fiverr",
+    company: "Client",
+    image: "",
+  },
+  {
+    testimonial:
+      "Fast to delivered, he have good communication skills and know what he is doing, i can proudly say it and I recommend him for you guys well. Wish to work with you next time.",
+    name: "Olaxa",
+    designation: "Fiverr",
+    company: "Client",
+    image: "",
+  },
+  {
+    testimonial:
+      "Very talented freelancer. Super hard working and understands tasks well. His work is up to scratch, will communicate and find you cost effective solutions. Thank you for your honesty, we will surely work together again for another project. Highly recommend.",
+    name: "Arezzu",
+    designation: "Fiverr",
+    company: "Client",
+    image: "",
+  },
+  {
+    testimonial:
+      "He is pro at what he is doing. Excellent job as always.",
+      name: "Finn",
+      designation: "Fiverr",
+      company: "Client",
+      image: "",
+  },
   {
     testimonial:
       "During the whole contract, We found Anas consistent and hardworking. We wish to work with him in future",
