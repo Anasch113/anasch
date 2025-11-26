@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
-
-import { Link } from "react-scroll"
-import { styles } from "../styles";
+import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-scroll";
 import { navLinks } from "../constants";
-import { logo, menu, close } from "../assets";
-
+import { menu, close } from "../assets";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -12,89 +10,93 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      if (scrollTop > 100) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-
+    const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <nav
-      className={`${styles.paddingX
-        } w-full flex items-center py-5 fixed top-0 z-20 ${scrolled ? "bg-primary" : "bg-transparent"
-        }`}
+    <motion.nav
+      initial={{ y: -80, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ type: "spring", stiffness: 70, damping: 15 }}
+      className={`fixed top-0 left-0 w-full z-50 flex justify-center transition-all duration-500 ${
+        scrolled
+          ? "backdrop-blur-xl bg-black/40 border-b border-white/10"
+          : "bg-transparent"
+      }`}
     >
-      <div className='w-full flex justify-between items-center  mx-auto'>
-        <a
-          href='/'
-          className='flex items-center gap-2'
-          onClick={() => {
-            setActive("");
-            window.scrollTo(0, 0);
-          }}
-        >
-          <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
-          <p className='text-white text-[18px] font-bold cursor-pointer flex '>
-            Anas Rafiq &nbsp;
-            <span className='sm:block hidden'> | Full Stack Developer</span>
-          </p>
-        </a>
+      {/* Capsule Container */}
+      <div className="relative flex items-center justify-center w-full max-w-3xl px-6 py-4">
+        <div className="hidden sm:flex items-center justify-center gap-8 px-10 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-lg shadow-[0_0_15px_rgba(255,255,255,0.05)]">
+          {/* Logo inside capsule */}
+          <span className="text-secondary text-lg font-semibold tracking-wide font-[Inter]">
+      {"<Anas />"}
+          </span>
 
-        <ul className='list-none hidden sm:flex flex-row gap-10'>
-          {navLinks.map((nav) => (
-            <Link
-              to={nav.id}
-              smooth={true}
-              duration={500}
-              key={nav.id}
-              className={`${active === nav.title ? "text-white" : "text-secondary"
-                } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(nav.title)}
-            >
-             <a >{nav.title}</a>
-            </Link>
-          ))}
-        </ul>
+          {/* Nav Links */}
+          <div className="flex gap-8">
+            {navLinks.map((nav) => (
+              <Link
+                to={nav.id}
+                key={nav.id}
+                smooth={true}
+                duration={500}
+                onClick={() => setActive(nav.title)}
+                className={`cursor-pointer text-[15px] font-medium transition-all duration-300 ${
+                  active === nav.title
+                    ? "text-white font-semibold"
+                    : "text-gray-400 hover:text-white"
+                }`}
+              >
+                {nav.title}
+              </Link>
+            ))}
+          </div>
+        </div>
 
-        <div className='sm:hidden flex flex-1 justify-end items-center'>
-          <img
-            src={toggle ? close : menu}
-            alt='menu'
-            className='w-[28px] h-[28px] object-contain'
-            onClick={() => setToggle(!toggle)}
-          />
+        {/* Mobile Menu Button */}
+        <motion.img
+          whileTap={{ scale: 0.9 }}
+          src={toggle ? close : menu}
+          alt="menu"
+          className="sm:hidden absolute right-6 w-[25px] h-[25px] cursor-pointer "
+          onClick={() => setToggle(!toggle)}
+        />
+      </div>
 
-          <div
-            className={`${!toggle ? "hidden" : "flex"
-              } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+      {/* Mobile Dropdown */}
+      <AnimatePresence>
+        {toggle && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.25 }}
+            className="sm:hidden absolute top-16 left-5 right-5 bg-black/90 backdrop-blur-lg border border-white/10 rounded-2xl p-6 shadow-[0_0_20px_rgba(255,255,255,0.1)] "
           >
-            <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
+            <ul className="flex flex-col gap-5 text-center">
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${active === nav.title ? "text-white" : "text-secondary"
-                    }`}
+                  className={`text-[16px] font-medium cursor-pointer ${
+                    active === nav.title
+                      ? "text-white font-semibold"
+                      : "text-gray-300 hover:text-white"
+                  }`}
                   onClick={() => {
-                    setToggle(!toggle);
                     setActive(nav.title);
+                    setToggle(false);
                   }}
                 >
                   <a href={`#${nav.id}`}>{nav.title}</a>
                 </li>
               ))}
             </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.nav>
   );
 };
 

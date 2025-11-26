@@ -1,147 +1,96 @@
 import React from "react";
-import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
-
-import { styles } from "../styles";
-import { github } from "../assets";
-import { SectionWrapper } from "../hoc";
-import { projects } from "../constants/projects"
-import { fadeIn, textVariant } from "../utils/motion";
 import { IoIosLink } from "react-icons/io";
-import { BsInfoLg } from "react-icons/bs";
-import { useState } from "react";
-
-
-const ProjectCard = ({
-  index,
-  name,
-  description,
-  techs,
-  image,
-  visit_link,
-  bgColor,
-  worksOn
-}) => {
-
-  const [showBox, setShowBox] = useState(false);
-
-  return (
-    <div >
-      <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className={`flex gap-5 ${bgColor} p-5 rounded-2xl  w-full md:min-h-[400px] md:flex-row flex-col`}
-      >
-
-        {/* 1st part */}
-        <div className='flex items-center relative p-3  md:h-[400px] rounded-2xl'>
-          <div className=" md:w-[500px] md:h-[320px] h-[200px] z-0">
-            <img
-              src={image}
-              alt='project_image'
-              className=' object-cover rounded-2xl '
-              style={{ width: '100%', height: '100%' }}
-            />
-
-            {/* <div className="absolute inset-0 bg-gray-300 opacity-50 -z-10 rounded-2xl"></div> */}
-          </div>
-
-          {/* Overlay */}
-
-
-
-        </div>
-
-        {/* 2nd part */}
-        <div className="relative p-3 flex flex-col gap-5">
-
-          <div className='mt-5'>
-            <h3 className='text-white font-bold text-3xl'>{name}</h3>
-            {/* <p className='mt-2 text-white text-[14px]'>{description}</p> */}
-            <span className="flex flex-col gap-3 p-3">
-              <p className="my-1 font-md ">Worked on</p>
-
-              <div className="flex gap-2 flex-wrap font-roboto">{worksOn.map((feature, i) =>
-                <button className="glass-button-3" key={i} >{feature}</button>
-              )}</div>
-            </span>
-
-          </div>
-          {/* Info div */}
-          <div className="absolute inset-0 flex justify-end "
-          >
-            <span
-              onMouseEnter={() => setShowBox(true)}
-              onMouseLeave={() => setShowBox(false)}
-              className="flex items-center text-2xl w-10 h-10 bg-white p-3 rounded-full text-black"
-            >
-              <BsInfoLg size={30} />
-            </span>
-            {showBox && (
-              <div className="info-box">
-                {/* Your text content goes here */}
-                {description}
-              </div>
-            )}
-          </div>
-
-          <p className="my-1 font-md ">Skills I Used</p>
-          <div className='w-full flex-wrap   flex  p-1 gap-4  '>
-
-
-            {
-              techs.map((tech, index) => (
-                <span key={index} className='flex items-center justify-center md:gap-3 gap-1  px-5 py-1 rounded-full bg-white '>
-                  <img className='md:w-10 md:h-10  h-8 w-8' src={tech.icon} alt="html" />
-                  <p className='text-black-100 font-semibold  '>{tech.name}</p>
-                </span>
-              ))
-            }
-
-          </div>
-          <a href={visit_link} target="_main" className="glass-button-2">
-            <span className="w-full flex items-center justify-center gap-2">
-              <IoIosLink />
-              <p>Go To {name}</p>
-            </span>
-          </a>
-        </div>
-      </div>
-    </div>
-  );
-};
+import { projects } from "../constants/projects";
 
 const Works = () => {
   return (
-    <>
-      <div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>My work</p>
-        <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
-      </div>
+    <section
+      id="work"
+      className="w-full min-h-screen bg-deep-space text-white py-24 px-6 sm:px-12 md:px-20 flex flex-col gap-24"
+    >
+      {/* Section Heading */}
+      <motion.div
+        className="text-center mb-10"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+      >
+        <motion.h2 className="text-[clamp(2.8rem,5vw,4rem)] font-bold mb-6 tracking-tight text-gray-100">
+          our Selected <span className="text-gray-500">Works</span>
+        </motion.h2>
+        <p className="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+          A journey of learning, <span className="text-secondary">building,</span> and growing through{" "}
+          <span className="text-secondary">real-world projects</span> and professional collaborations.
+        </p>
+      </motion.div>
 
-      <div className='w-full flex'>
-        <div
-          variants={fadeIn("", "", 0.1, 1)}
-          className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
-        >
-          Following projects showcases my skills and experience through
-          real-world examples of my work. Each project is briefly described with
-          links to code repositories and live demos in it. It reflects my
-          ability to solve complex problems, work with different technologies,
-          and manage projects effectively.
-        </div>
-      </div>
-
-      <div className='mt-20 flex flex-col gap-7 w-full'>
+      {/* Projects List */}
+      <div className="flex flex-col gap-32">
         {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: index * 0.15 }}
+            viewport={{ once: true }}
+            className="flex flex-col md:flex-row items-start md:items-center justify-between gap-10 md:gap-16"
+          >
+            {/* Left Side — Number */}
+            <div className="flex items-center justify-center md:justify-start w-full md:w-[20%]">
+              <div className="flex items-center gap-1">
+                <h1 className="text-[4rem] sm:text-[6rem] font-extrabold text-gray-300 leading-none">
+                  {String(index + 1).padStart(2, "0")}
+                </h1>
+                <span className="text-yellow-400 text-4xl font-bold leading-none">
+                  .
+                </span>
+              </div>
+            </div>
+
+            {/* Right Side — Project Details */}
+            <div className="flex flex-col justify-center w-full md:w-[75%] max-w-3xl">
+              <img
+                src={project.image}
+                alt={project.name}
+                className="w-full h-[300px] object-top rounded-2xl mb-6 border border-white/10 shadow-[0_0_40px_-10px_rgba(255,255,255,0.1)]"
+              />
+
+              <div className="flex flex-col gap-2">
+
+                <h3 className="text-2xl sm:text-3xl font-semibold text-secondary">
+                  {project.name}
+                </h3>
+                <p className="text-gray-400 text-sm sm:text-base leading-relaxed mb-4">
+                  {project.description.slice(0, 150)}...
+                </p>
+
+                <div className="flex flex-wrap gap-2 mb-5">
+                  {project.techs?.slice(0, 4).map((tech, i) => (
+                    <span
+                      key={i}
+                      className="text-xs px-3 py-1 rounded-full border border-white/20 text-gray-300 bg-white/5"
+                    >
+                      {tech.name}
+                    </span>
+                  ))}
+                </div>
+
+                <a
+                  href={project.visit_link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center gap-2 text-yellow-400 text-sm font-medium hover:text-yellow-300 transition"
+                >
+                  <IoIosLink size={18} /> Visit Project
+                </a>
+              </div>
+            </div>
+          </motion.div>
         ))}
       </div>
-    </>
+    </section>
   );
 };
 
-export default SectionWrapper(Works, "work");
+export default Works;

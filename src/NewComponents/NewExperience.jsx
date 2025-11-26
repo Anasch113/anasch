@@ -1,79 +1,97 @@
-import React from 'react'
-import { RiArrowRightDoubleLine } from "react-icons/ri";
-import { experiences } from '../constants';
-import { TiLocationArrowOutline } from "react-icons/ti";
+import React from "react";
+import { motion } from "framer-motion";
+import { experiences } from "../constants";
 import { MdOutlineDateRange } from "react-icons/md";
 import { PiPaperPlaneRightLight } from "react-icons/pi";
 
 const NewExperience = () => {
+  return (
+    <div className="relative min-h-screen w-full bg-deep-space text-white flex flex-col items-center justify-center py-24 px-5 overflow-hidden">
 
+      {/* Section Title */}
+      <motion.div
+        className="relative z-10 max-w-4xl text-center mb-10"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+      >
+        <motion.h2
+          className="text-[clamp(2.8rem,5vw,4rem)] font-bold mb-6 tracking-tight text-gray-100"
+        >
+          Experience
+        </motion.h2>
+        <p className="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+          A journey of learning, <span className="text-secondary">building,</span>  and growing through <span className="text-secondary"> real-world projects </span> and professional collaborations.
+        </p>
+      </motion.div>
 
-    return (
-        <div className='min-h-screen w-full px-5 mb-5'>
-            <div className='w-full flex flex-col items-center justify-center'>
+      {/* Experience Cards */}
+      <div className="w-full flex flex-col items-center gap-10 z-10">
+        {experiences.map((exp, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.12, ease: "easeOut" }}
+            whileHover={{ scale: 1.02 }}
+            className="relative group w-full md:w-[70%] lg:w-[60%] rounded-2xl p-8 sm:p-10 backdrop-blur-md bg-white/[0.03] border border-white/10 hover:border-yellow-400/30 shadow-[0_0_25px_-8px_rgba(255,255,255,0.1)] transition-all duration-500"
+          >
+            {/* Top Yellow Border */}
+            <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-yellow-400 to-yellow-300 rounded-t-2xl" />
 
-                <h2 className='text-text-yellow text-3xl font-medium'>Experience</h2>
-
-                <div className='w-full flex flex-col items-center gap-5 mt-5 '>
-
-
-                    {/* 1st Box */}
-                    {
-                        experiences.map((experience, index) => (
-                            <div key={index} className={`${index === 1 && "bg-[url('/blurrybg.svg')] bg-cover bg-center bg-gray-200"} w-full md:w-2/3 text-gray-900 justify-center  rounded-3xl bg-white min-h-[400px] gap-4 p-5 `}>
-
-
-                                <div className='flex md:justify-between max-[500px]:gap-4 max-[500px]:flex-col'>
-
-                                    <span className='bg-tertiary flex  items-center py-1 md:px-3 px-3 rounded-full md:w-64 min-w-[192px]'>
-                                        <img src={experience.icon}
-                                            alt={experience.company_name} className='md:w-12 md:h-12 h-8 w-8 rounded-full  '>
-
-                                        </img>
-                                        <span className='flex flex-col'>
-                                            <p className='text-text-yellow font-bold ml-2 text-lg'>{experience.company_name}</p>
-                                            <p className='text-white ml-2'>Remote</p>
-                                        </span>
-
-                                    </span>
-
-                                    <span className='bg-yellow-200  h-12 px-5 font-bold rounded-full md:min-w-[250px] min-w-[288px]  flex md:py-4 items-center max-[500px]:text-sm gap-2'>
-                                        <MdOutlineDateRange size={20}/>
-                                        <p className='text-center'> {experience.date}</p>
-                                       
-                                    </span>
-                                </div>
-
-                                <div className='flex py-8'>
-                                    <img src='' alt='' />
-                                    <h2 className='text-2xl font-bold'>{experience.title}</h2>
-                                </div>
-
-                                <div className='flex flex-col gap-4 p-4 '>
-                                    {
-                                        experience.points.map((point, index) => (
-                                            <span key={index} className='flex flex-row items-center gap-2 '>
-                                                <PiPaperPlaneRightLight size={20} />
-                                                <p> {point}</p>
-
-
-                                            </span>
-                                        ))
-                                    }
-
-                                </div>
-
-                            </div>
-                        ))
-                    }
-
-
-
+            {/* Header */}
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-4">
+              <div className="flex items-center gap-3">
+                <img
+                  src={exp.icon}
+                  alt={exp.company_name}
+                  className="w-10 h-10 rounded-full bg-white/10 p-2 border border-white/10"
+                />
+                <div>
+                  <p className="text-lg font-semibold text-white">
+                    {exp.company_name}
+                  </p>
+                  <p className="text-xs text-gray-400">Remote</p>
                 </div>
+              </div>
 
+              <div className="flex items-center gap-2 bg-gray-300 text-gray-900 font-semibold px-3 py-1.5 rounded-full text-xs shadow-[0_0_15px_rgba(250,204,21,0.3)]">
+                <MdOutlineDateRange size={16} />
+                <p>{exp.date}</p>
+              </div>
             </div>
-        </div>
-    )
-}
 
-export default NewExperience
+            {/* Role Title */}
+            <h3 className="text-2xl font-bold mb-5 text-secondary tracking-tight">
+              {exp.title}
+            </h3>
+
+            {/* Points */}
+            <div className="flex flex-col gap-3">
+              {exp.points.map((point, i) => (
+                <motion.div
+                  key={i}
+                  whileHover={{ x: 4 }}
+                  className="flex items-start gap-2 text-gray-300 text-sm leading-relaxed"
+                >
+                  <PiPaperPlaneRightLight
+                    className="text-yellow-400 mt-[3px]"
+                    size={16}
+                  />
+                  <p>{point}</p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        ))}
+      </div>
+
+      {/* Soft Background Accent */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-yellow-500/5 blur-[160px] rounded-full" />
+      </div>
+    </div>
+  );
+};
+
+export default NewExperience;

@@ -1,62 +1,70 @@
-import React from "react";
-import {Tilt} from 'react-tilt'
-import { motion } from "framer-motion";
+"use client";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
-import { styles } from "../styles";
-import { services } from "../constants";
-import { SectionWrapper } from "../hoc";
-import { fadeIn, textVariant } from "../utils/motion";
+export default function AboutSection() {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1.2 1"],
+  });
 
-const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className='xs:w-[250px] w-full'>
-    <motion.div
-      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className='w-full  p-[1px] rounded-[20px] shadow-card'
-    >
-      <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className='bg-grayy rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
-      >
-        <img
-          src={icon}
-          alt='web-development'
-          className='w-16 h-16 object-contain'
-        />
+  // Parallax text movement
+  const y = useTransform(scrollYProgress, [0, 1], ["20%", "0%"]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
-        <h3 className='text-white text-[20px] font-bold text-center'>
-          {title}
-        </h3>
-      </div>
-    </motion.div>
-  </Tilt>
-);
-
-const About = () => {
   return (
-    <>
-      <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
-      </motion.div>
+    <section
+      ref={ref}
+      id="about"
+      className="relative min-h-screen w-full second-bg-color flex flex-col justify-center overflow-hidden text-gray-200 sm:py-0 py-10"
+    >
 
-      <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
-        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
-      >
-       A passionate full stack web developer with over 3+ years of experience in crafting the web solutions for online business. My expertise lies in leveraging cutting-edge technologies like ReactJS, Nextjs, NodeJS, ExpressJS and various third party API integrations like OpenAPI, REST Api, Web Api, AssemblyAI, PayPal & Stripe integartions etc. I am proficient in implementing responsive and mobile-first design principles using CSS frameworks like Tailwind CSS. In addition, I am also known to write clean and well structure code to enhance the overall maintainablity of projects. Using web servers like Nginx, I can deploy full stack apps on Virtual Private Servers (VPS) as part of my production expertise.
-      </motion.p>
 
-      <div className='mt-20 flex items-center justify-center flex-wrap gap-10'>
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
-        ))}
+      {/* Content */}
+      <div className="relative z-10 max-w-6xl mx-auto px-8 flex flex-col items-start">
+        {/* Heading */}
+        <motion.h2
+          style={{ y, opacity }}
+          className="text-[clamp(2.5rem,5vw,4rem)] font-bold mb-0 sm:mb-8 text-white tracking-tight leading-tight"
+        >
+          Who Am I <span className="text-gray-500">?</span>
+        </motion.h2>
+
+        {/* Paragraph */}
+        <motion.p
+          style={{ opacity, y }}
+          className="text-[1.15rem] leading-relaxed text-gray-400 max-w-4xl mb-12 font-light"
+        >
+          I’m <span className="text-secondary font-medium">Anas Rafiq</span>, a
+          passionate <span className="text-secondary font-medium">Full-Stack Developer</span> who loves crafting digital
+          experiences that combine design, logic, and performance.
+          My goal is to make the web feel intuitive — where every line of code
+          not only functions but tells a story.
+          <br /> <br />
+          I build modern, scalable, and useful applications with clean code,
+          thoughtful architecture, and pixel-perfect UI. I believe in simplicity,
+          focus, and constant learning — that’s how I grow as both a developer
+          and a creator.
+        </motion.p>
+
+        {/* Soft motion line + signature style text */}
+        <motion.div
+          initial={{ width: 0 }}
+          whileInView={{ width: "100%" }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          className="h-[1px] bg-gray-700 mb-8"
+        ></motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.8 }}
+          className="text-lg font-light text-secondary tracking-wider"
+        >
+           Code. Create. Inspire.
+        </motion.div>
       </div>
-    </>
+    </section>
   );
-};
-
-export default SectionWrapper(About, "about");
+}

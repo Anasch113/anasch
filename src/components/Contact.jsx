@@ -1,11 +1,7 @@
+"use client";
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-
-import { styles } from "../styles";
-
-import { SectionWrapper } from "../hoc";
-import { slideIn } from "../utils/motion";
 import { VscSend } from "react-icons/vsc";
 
 const Contact = () => {
@@ -21,158 +17,156 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
-    const { target } = e;
-    const { name, value } = target;
-
-    setForm({
-      ...form,
-      [name]: value,
-    });
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
 
-
-    emailjs.send(
-      'service_h2dnguh',
-      'template_lwigsgk',
-      {
-        from_name: form.name,
-        to_name: "Anas Ch",
-        from_email: form.email,
-        to_email: "anaschaudry2002@gmail.com",
-        message: `
-        Email: ${form.email}
-        Phone: ${form.phone},
-        Subject: ${form.subject},
-        Message: ${form.message}`,
-      },
-      '6w4SVYXj59ECt3KUR'
-    )
+    emailjs
+      .send(
+        "service_h2dnguh",
+        "template_lwigsgk",
+        {
+          from_name: form.name,
+          to_name: "Anas Ch",
+          from_email: form.email,
+          to_email: "anaschaudry2002@gmail.com",
+          message: `
+          Email: ${form.email}
+          Phone: ${form.phone},
+          Subject: ${form.subject},
+          Message: ${form.message}`,
+        },
+        "6w4SVYXj59ECt3KUR"
+      )
       .then(
         () => {
           setLoading(false);
           alert("Thank you. I will get back to you as soon as possible.");
-
           setForm({
             name: "",
             email: "",
+            phone: "",
+            subject: "",
             message: "",
           });
         },
         (error) => {
           setLoading(false);
           console.error(error);
-
-          alert("Ahh, something went wrong. Please try again.");
+          alert("Something went wrong. Please try again.");
         }
       );
   };
 
   return (
-    <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden items-center justify-center px-2`}
+    <section
+      id="contact"
+      className="w-full min-h-screen second-bg-color text-white flex items-center justify-center py-20 px-6 sm:px-10 lg:px-20"
     >
-      <motion.div
-        variants={slideIn("left", "tween", 0.2, 1)}
-        className='md:flex-[0.75] w-full bg-white p-8 rounded-3xl justify-center '
-      >
-
-        <p className="sm:text-[18px] text-[14px] text-gray-dark uppercase tracking-wider">Get in touch</p>
-        <h3 className="text-gray-dark font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">Contact.</h3>
-
-        <form
-          ref={formRef}
-          onSubmit={handleSubmit}
-          className='mt-12 relative flex flex-col gap-8 w-full'
+      <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12">
+        {/* ---------- Left Section ---------- */}
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="flex flex-col justify-center"
         >
+          <h2 className="text-4xl sm:text-5xl font-semibold text-white mb-4">
+            Contact Us
+          </h2>
+          <p className="text-gray-400 text-lg mb-6 leading-relaxed">
+            Whether you have a project in mind, a question, or just want to
+            connect — feel free to reach out. We’d love to hear from you!
+          </p>
 
-          <div className="flex md:flex-row flex-col w-full gap-2">
-            <label className='flex flex-col md:w-2/4 w-full'>
-              <span className='text-black-100 font-medium mb-4'>Your Email</span>
+          <div className="text-gray-300 space-y-2">
+            <p>Email us directly:</p>
+            <a
+              href="mailto:anaschaudry2002@gmail.com"
+              className="text-[#FDB827] hover:underline text-lg"
+            >
+              anaschaudry2002@gmail.com
+            </a>
+          </div>
+        </motion.div>
+
+        {/* ---------- Right Form Card ---------- */}
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="w-full bg-[#181820]/80 border border-[#2c2c38] rounded-3xl shadow-[0_0_40px_-10px_rgba(255,255,255,0.1)] p-8 sm:p-10 backdrop-blur-lg"
+        >
+          <h3 className="text-2xl font-semibold mb-6 text-white">
+            Get in Touch
+          </h3>
+          <form
+            ref={formRef}
+            onSubmit={handleSubmit}
+            className="flex flex-col gap-5"
+          >
+            <div className="flex flex-col sm:flex-row gap-4">
               <input
-                type='email'
-                name='email'
-                value={form.email}
-                onChange={handleChange}
-                placeholder="What's your email address?"
-                className='bg-white-100 border py-4 px-6 placeholder:text-gray-500 text-black-100 rounded-full outline-none  font-medium'
-              />
-            </label>
-            <label className='flex flex-col md:w-2/4 w-full'>
-              <span className='text-black-100 font-medium mb-4'>Your name</span>
-              <input
-                type='text'
-                name='name'
+                type="text"
+                name="name"
                 value={form.name}
                 onChange={handleChange}
-                placeholder="What's your good name?"
-                className='bg-white-100 border py-4 px-6 placeholder:text-gray-500 text-black-100 rounded-full outline-none  font-medium'
+                placeholder="Your Name"
+                className="flex-1 bg-[#0E0E12] border border-[#2c2c38] rounded-xl py-3 px-5 outline-none text-white focus:border-[#FDB827]/70 transition"
               />
-            </label>
-          </div>
-
-
-          <div className="flex md:flex-row flex-col w-full gap-2">
-            <label className='flex flex-col md:w-2/4 w-full'>
-              <span className='text-black-100 font-medium mb-4'>Mobile Number</span>
               <input
-                type='number'
-                name='phone'
+                type="email"
+                name="email"
+                value={form.email}
+                onChange={handleChange}
+                placeholder="Email Address"
+                className="flex-1 bg-[#0E0E12] border border-[#2c2c38] rounded-xl py-3 px-5 outline-none text-white focus:border-[#FDB827]/70 transition"
+              />
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <input
+                type="number"
+                name="phone"
                 value={form.phone}
                 onChange={handleChange}
                 placeholder="Phone Number"
-                className='bg-white-100 border py-4 px-6 placeholder:text-gray-500 text-black-100 rounded-full outline-none  font-medium'
+                className="flex-1 bg-[#0E0E12] border border-[#2c2c38] rounded-xl py-3 px-5 outline-none text-white focus:border-[#FDB827]/70 transition"
               />
-            </label>
-            <label className='flex flex-col md:w-2/4 w-full'>
-              <span className='text-black-100 font-medium mb-4'>Subject</span>
               <input
-                type='text'
-                name='subject'
+                type="text"
+                name="subject"
                 value={form.subject}
                 onChange={handleChange}
                 placeholder="Subject"
-                className='bg-white-100 border py-4 px-6 placeholder:text-gray-500 text-black-100 rounded-full outline-none  font-medium'
+                className="flex-1 bg-[#0E0E12] border border-[#2c2c38] rounded-xl py-3 px-5 outline-none text-white focus:border-[#FDB827]/70 transition"
               />
-            </label>
-          </div>
+            </div>
 
-          <label className='flex flex-col'>
-            <span className='text-black-100 font-medium mb-4'>Your Message</span>
             <textarea
-              rows={7}
-              name='message'
+              name="message"
+              rows="5"
               value={form.message}
               onChange={handleChange}
-              placeholder='What you want to say?'
-              className='bg-white-100 py-4 px-6 placeholder:text-grayy text-black-100 rounded-lg outline-none border-none font-medium'
-            />
-          </label>
+              placeholder="Type your message..."
+              className="bg-[#0E0E12] border border-[#2c2c38] rounded-xl py-3 px-5 outline-none text-white focus:border-[#FDB827]/70 transition resize-none"
+            ></textarea>
 
-          <button
-            type='submit'
-            className='bg-[#FDB827] py-3 px-8 rounded-3xl outline-none w-fit text-black-100 font-semibold  shadow-primary'
-          >
-            <span className="flex items-center text-lg gap-2">
-
-              {loading ? "Sending..." : "Send"}
-              <VscSend />
-            </span>
-
-          </button>
-        </form>
-        <div className="absolute md:top-[580px] max-[1000px]:hidden md:left-[600px]  z-50 ">
-          <img className="md:w-60 md:h-60" src="/3d-laptop-boy.png" alt="" />
-        </div>
-
-      </motion.div>
-
-
-    </div>
+            <button
+              type="submit"
+              className="bg-[#FDB827] hover:bg-[#ffc94d] text-black font-semibold py-3 px-8 rounded-full transition-all flex items-center justify-center gap-2"
+            >
+              {loading ? "Sending..." : "Send Message"} <VscSend />
+            </button>
+          </form>
+        </motion.div>
+      </div>
+    </section>
   );
 };
 
-export default SectionWrapper(Contact, "contact");
+export default Contact;

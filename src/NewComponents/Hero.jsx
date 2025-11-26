@@ -1,61 +1,60 @@
+import React from "react";
 import { motion } from "framer-motion";
-import "../components/Hero.css"
-import { styles } from "../styles";
-import AnasRafiqResume from "../assets/AnasRafiqResume.pdf"
-import { Link } from "react-scroll"
-const Hero = () => {
+import { Link } from "react-scroll";
+import { BackgroundBeams } from "./ui/background-beams";
+import Anas from "../assets/Profile pic/Anas.jpeg";
 
-  const handleDownload = () => {
-
-    const pdfFilePath = AnasRafiqResume;
-    const downloadLink = document.createElement('a');
-    downloadLink.href = pdfFilePath;
-    downloadLink.download = 'AnasRafiqResume.pdf';
-    document.body.appendChild(downloadLink);
-    downloadLink.click();
-    document.body.removeChild(downloadLink);
-  };
+export default function HeroSection() {
   return (
-    <div className={` w-full h-screen flex  `}>
-
-
-
-      <div className="flex w-full h-full items-center justify-center  flex-col">
-        <h1 className={`${styles.heroHeadText} text-white`}>
-          Hi, I'm <span className='text-[#FDB827]'>Anas</span>
-        </h1>
-
-        <div className="flex items-center flex-col py-2 gap-2">
-          <p className="text-2xl"> A Full Stack Web Developer</p>
-          <p className="text-lg">with <span className="glass-button">3+ years</span> of Experience</p>
-          <div className="flex gap-4">
-
-            <button onClick={handleDownload} className="px-5 py-2 mt-5 rounded-full text-text-yellow border-2 border-fourth">Resume</button>
-            <Link
-              to="contact"
-              smooth={true}
-              duration={500}
-              target="_blank"
-              className="cursor-pointer px-5 py-2 mt-5 rounded-full font-medium bg-fourth text-black"
-            >
-
-              Hire Me</Link>
-
-
-          </div>
-
-        </div>
-
+    <section className="relative min-h-screen w-full flex items-center justify-start px-6 sm:px-16 lg:px-28 bg-deep-space text-white overflow-hidden sm:py-0 py-10">
+      {/* Background Beams */}
+      <div className="absolute inset-0 z-0">
+        <BackgroundBeams />
       </div>
 
-    </div>
+      {/* Main Content */}
+      <motion.div
+        initial={{ opacity: 0, x: -60 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+        className="relative z-10 max-w-6xl text-left space-y-4"
+      >
+        {/* Profile Image */}
+        <div className="w-32 h-32 rounded-full overflow-hidden border border-white/20 shadow-[0_0_25px_rgba(255,255,255,0.08)] mb-6">
+          <img
+            src={Anas}
+            alt="Profile"
+            className="w-full h-full object-cover rounded-full"
+          />
+        </div>
+
+        {/* Heading */}
+        <h1 className="text-4xl sm:text-5xl font-semibold leading-snug text-gray-100">
+          Hi, I’m <span className="text-secondary">Anas Rafiq</span> , Software Developer and AI expert
+        </h1>
+
+        {/* Subtext */}
+        <p className="text-gray-400 text-base sm:text-lg w-full leading-relaxed">
+          I’m a freelance developer and designer working globally.
+          I build modern, scalable, and useful web applications for
+          the digital world. In my free time, I love exploring new
+          technologies and designing creative interfaces.In my free time, I love exploring new
+          technologies and designing creative interfaces
+        </p>
+
+        {/* Buttons */}
+        <div className="flex flex-wrap gap-4 mt-6">
+
+          <Link
+            to="contact"
+            smooth={true}
+            duration={600}
+            className="px-6 py-3 rounded-full text-sm font-semibold text-gray-100 bg-[#0d0d0d] border border-white/10 hover:bg-white/5 transition-all duration-300 cursor-pointer"
+          >
+            Get in touch
+          </Link>
+        </div>
+      </motion.div>
+    </section>
   );
-};
-
-export default Hero;
-
-
-// <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-// I develop project ideas, user <br className='sm:block hidden' />
-// interfaces and web applications
-// </p>
+}
