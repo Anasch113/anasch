@@ -9,15 +9,15 @@ export default function AboutSection() {
     offset: ["0 1", "1.2 1"],
   });
 
-  // Parallax text movement
+  // // Parallax text movement
   const y = useTransform(scrollYProgress, [0, 1], ["20%", "0%"]);
-  const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
+  // const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   return (
     <section
       ref={ref}
       id="about"
-      className="relative min-h-screen w-full second-bg-color flex flex-col justify-center overflow-hidden text-gray-200 sm:py-0 py-10"
+      className="relative w-full second-bg-color flex flex-col overflow-hidden text-gray-200 py-16 sm:py-20"
     >
 
 
@@ -25,27 +25,28 @@ export default function AboutSection() {
       <div className="relative z-10 max-w-6xl mx-auto px-8 flex flex-col items-start">
         {/* Heading */}
         <motion.h2
-          style={{ y, opacity }}
-          className="text-[clamp(2.5rem,5vw,4rem)] font-bold mb-0 sm:mb-8 text-white tracking-tight leading-tight"
+          style={{ y }}
+         className="text-[clamp(2.5rem,5vw,4rem)] font-bold mb-6 sm:mb-8 text-white tracking-tight leading-tight"
         >
           Who Am I <span className="text-gray-500">?</span>
         </motion.h2>
 
         {/* Paragraph */}
         <motion.p
-          style={{ opacity, y }}
-          className="text-[1.15rem] leading-relaxed text-gray-400 max-w-4xl mb-12 font-light"
+          style={{  y }}
+          className="text-[1.15rem] leading-relaxed text-gray-400 max-w-4xl mb-10 sm:mb-12 font-light"
         >
           I’m <span className="text-secondary font-medium">Anas Rafiq</span>, a
-          passionate <span className="text-secondary font-medium">Full-Stack Developer</span> who loves crafting digital
-          experiences that combine design, logic, and performance.
-          My goal is to make the web feel intuitive — where every line of code
-          not only functions but tells a story.
+          <span className="text-secondary font-medium"> Full-Stack Developer and AI Specialist</span> focused on building modern, scalable, and production-ready digital products. I combine strong engineering practices with modern frontend design, backend development and advanced AI to help businesses turn ideas into reliable solutions.
           <br /> <br />
-          I build modern, scalable, and useful applications with clean code,
-          thoughtful architecture, and pixel-perfect UI. I believe in simplicity,
-          focus, and constant learning — that’s how I grow as both a developer
-          and a creator.
+          I’ve delivered enterprise-grade SaaS platforms, AI-driven systems, and custom applications across industries such as education, healthcare, legal, and enterprise operations. My work emphasizes clean architecture, performance, usability, and long-term scalability.
+          <br /> <br />
+          My core toolkit includes   <span className="font-semibold text-gray-400">
+    React, Next.js, Node.js, JavaScript, Python, cloud platforms, and advanced AI
+    systems such as fine-tuned models, RAG pipelines, and real-time AI integrations.
+  </span>
+          <br /> <br />
+          I also lead a skilled team, allowing me to take ownership of projects end-to-end. Clients work with me as a technical partner, trusting me to understand their goals and deliver high-quality, future-proof solutions.
         </motion.p>
 
         {/* Soft motion line + signature style text */}
@@ -62,7 +63,7 @@ export default function AboutSection() {
           transition={{ delay: 0.4, duration: 0.8 }}
           className="text-lg font-light text-secondary tracking-wider"
         >
-           Code. Create. Inspire.
+          Code. Create. Inspire.
         </motion.div>
       </div>
     </section>

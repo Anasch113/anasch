@@ -16,7 +16,7 @@ const ConnectWithMe = () => {
           Let’s <span className="text-gray-500">Connect</span>
         </motion.h2>
         <p className="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-          I’m always open to discussing new projects, creative ideas, or
+          I’m <span className="text-secondary">always open</span>  to discussing new projects, creative ideas, or
           opportunities to be part of your visions.
           Let’s build something <span className="text-secondary">amazing</span> together.
         </p>

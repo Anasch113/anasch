@@ -6,7 +6,7 @@ import { PiPaperPlaneRightLight } from "react-icons/pi";
 
 const NewExperience = () => {
   return (
-    <div className="relative min-h-screen w-full bg-deep-space text-white flex flex-col items-center justify-center py-24 px-5 overflow-hidden">
+    <div className="relative min-h-screen w-full second-bg-color text-white flex flex-col items-center justify-center py-24 px-5 overflow-hidden">
 
       {/* Section Title */}
       <motion.div
@@ -21,7 +21,7 @@ const NewExperience = () => {
           Experience
         </motion.h2>
         <p className="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-          A journey of learning, <span className="text-secondary">building,</span>  and growing through <span className="text-secondary"> real-world projects </span> and professional collaborations.
+         <span className="text-secondary"> A proven record</span>  of delivering reliable, high-quality solutions through real-world projects and long-term   <span className="text-secondary">professional collaborations.</span> 
         </p>
       </motion.div>
 

@@ -28,7 +28,7 @@ const Testimonials = () => {
   );
 
   return (
-    <section className="w-full min-h-screen second-bg-color text-white py-24 px-6 sm:px-12 md:px-20 flex flex-col items-center justify-center overflow-x-hidden">
+    <section className="w-full min-h-screen bg-deep-space text-white py-24 px-6 sm:px-12 md:px-20 flex flex-col items-center justify-center overflow-x-hidden">
       {/* Section Heading */}
       <motion.div
         className="text-center mb-16"
@@ -54,8 +54,8 @@ const Testimonials = () => {
   transition={{ duration: 0.6, delay: 0.2 }}
 >
   {[
-    { value: "4+", label: "Years of experience" },
-    { value: "36+", label: "Completed projects" },
+    { value: "5+", label: "Years of experience" },
+    { value: "50+", label: "Delievered projects" },
     { value: "30+", label: "Clients worldwide" },
   ].map((stat, i) => (
     <div key={i} className="flex flex-col min-w-[110px] sm:min-w-[130px]">

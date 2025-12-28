@@ -49,15 +49,16 @@ import postman from "../assets/tech/postman.png"
 
 //projects
 
+import EquityHub from "../assets/projects/equity_hub.png"
+import HidContentApp from "../assets/projects/hid_content_app.png"
+import SessionTactica from "../assets/projects/session_tactica.png"
+import Rxai from "../assets/projects/rxai-thumbnail.png"
+import SellPredator from "../assets/projects/sell_predator.png"
 import captify from "../assets/projects/captify.png"
-import CarRental from "../assets/projects/CarRental.png"
-import cicada from "../assets/projects/cicada.png"
-import sitaawards from "../assets/projects/sitaawards.png"
-import soundtik from "../assets/projects/soundtik.png"
-import webixstore from "../assets/projects/webixstore.png"
-import webdesign from "../assets/webdesign.png"
-import pgc1 from "../assets/projects/pgc1.png"
-import nextjsadmin from "../assets/projects/nextjsadmin.png"
+import EnglishHub from "../assets/projects/english_hub.png"
+import MindPlanner from "../assets/projects/theMindPlanner.png"
+import HidBookingTool from "../assets/projects/hid_booking_tool.png"
+
 
 
 export {
@@ -96,15 +97,6 @@ export {
   paypal,
   strapi,
   stripe,
-  webdesign,
-  pgc1,
-  captify,
-  CarRental,
-  cicada,
-  sitaawards,
-  soundtik,
-  webixstore,
-  nextjsadmin,
   woocommerce,
   express,
   nginx,
@@ -113,6 +105,14 @@ export {
   instagram,
   linkedin,
   facebook,
+EquityHub,
+HidContentApp,
+SessionTactica,
+Rxai,
+SellPredator,
+captify,
+EnglishHub,
+MindPlanner,
+HidBookingTool,
 
-  
 };
