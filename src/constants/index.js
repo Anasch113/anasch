@@ -36,15 +36,15 @@ import {
   nextjs,
   openapi,
   wordpress,
-  webdesign,
-  pgc1,
+  EquityHub,
+  HidContentApp,
+  SessionTactica,
+  Rxai,
+  SellPredator,
   captify,
-  CarRental,
-  cicada,
-  sitaawards,
-  soundtik,
-  webixstore,
-  nextjsadmin,
+  EnglishHub,
+  MindPlanner,
+  HidBookingTool,
   woocommerce,
   express,
   nginx,
@@ -77,17 +77,32 @@ export const navLinks = [
 ];
 
 const services = [
-
   {
-    title: "Full Stack Web Developer",
-    icon: mobile,
+    title: "Custom Web & SaaS Development",
+    desc: "End-to-end development of scalable, secure, and production-ready web platforms tailored to real business needs.",
   },
-
   {
-    title: "Wordpress Developer",
-    icon: creator,
+    title: "Modern Frontend Development & UI Design",
+    desc: "Clean, responsive, and high-performance interfaces built with modern frameworks and strong UX principles.",
+  },
+  {
+    title: "AI-Powered Applications & Chatbots",
+    desc: "Intelligent systems and conversational AI designed to automate workflows and enhance user experiences.",
+  },
+  {
+    title: "LLM Integration, Fine-Tuning & RAG Pipelines",
+    desc: "Advanced AI solutions including custom model fine-tuning, retrieval-augmented generation, and real-time AI systems.",
+  },
+  {
+    title: "Enterprise Integrations & Automation",
+    desc: "Seamless integration of tools, APIs, and enterprise systems to streamline operations and reduce manual work.",
+  },
+  {
+    title: "Scalable Deployment & Cloud Architecture",
+    desc: "Cloud-native architectures focused on performance, scalability, reliability, and long-term maintainability.",
   },
 ];
+
 
 const technologies = [
   {
@@ -209,34 +224,16 @@ const experiences = [
     title: "Full Stack Developer | Level 2 Seller",
     company_name: "Fiverr",
     icon: fiverr,
-    iconBg: "#383E56",
     date: "January 2022 - Present",
     points: [
+      "As a Level 2 Seller on Fiverr, I’ve successfully delivered multiple end-to-end projects for global clients, focusing on quality, clarity, and long-term value. I work closely with clients to understand their goals, translate ideas into well-structured products, and deliver reliable solutions on time. My approach emphasizes clear communication, transparent processes, and building trust through consistent results and client satisfaction."
 
-      "Developed and deployed 10+ successful freelance projects using MERN stack, Next.js, Python, Flask Firebase.",
-      " Designed and implemented RESTful APIs using OpenAPI and other API's to add AI functionalities to applications.",
-      "Implemented responsive and mobile-first design principles using CSS frameworks like Tailwind CSS",
-      " Hosted applications on VPS using web servers like Nginx",
-      "Optimized application performance and improved code"
+
     ],
   },
-  {
-    title: "Senior Software Engineer",
-    company_name: "Xavinex",
-    icon: codsoft,
-    iconBg: "#E6DEDD",
-    date: "September 2024 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other junior developers.",
-    ],
-  },
-  
 
 
- 
+
 ];
 
 const testimonials = [
@@ -276,10 +273,10 @@ const testimonials = [
   {
     testimonial:
       "He is pro at what he is doing. Excellent job as always.",
-      name: "Finn",
-      designation: "Fiverr",
-      company: "Client",
-      image: "",
+    name: "Finn",
+    designation: "Fiverr",
+    company: "Client",
+    image: "",
   },
   {
     testimonial:

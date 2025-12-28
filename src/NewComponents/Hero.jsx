@@ -36,10 +36,7 @@ export default function HeroSection() {
         {/* Subtext */}
         <p className="text-gray-400 text-base sm:text-lg w-full leading-relaxed">
           I’m a freelance developer and designer working globally.
-          I build modern, scalable, and useful web applications for
-          the digital world. In my free time, I love exploring new
-          technologies and designing creative interfaces.In my free time, I love exploring new
-          technologies and designing creative interfaces
+         I help businesses and founders turn ideas into reliable, scalable, and well-crafted digital products. My work focuses on clean execution, long-term performance, and delivering solutions that create real value for users and clients alike.
         </p>
 
         {/* Buttons */}

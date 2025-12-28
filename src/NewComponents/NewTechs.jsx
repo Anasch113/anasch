@@ -4,7 +4,7 @@ import { technologies } from "../constants";
 
 const NewTechs = () => {
   return (
-    <section className="relative overflow-hidden min-h-screen w-full flex flex-col items-center justify-center py-32 px-6 second-bg-color text-white">
+    <section className="relative overflow-hidden min-h-screen w-full flex flex-col items-center justify-center py-32 px-6 bg-deep-space text-white">
 
       {/* Section Title */}
       <motion.div
@@ -19,7 +19,7 @@ const NewTechs = () => {
           Technologies I <span className="text-gray-500">Use</span>
         </motion.h2>
         <p className="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-          A journey of learning, <span className="text-secondary">building,</span>  and growing through <span className="text-secondary"> real-world projects </span> and professional collaborations.
+          A modern and <span className="text-secondary">battle-tested</span> set of technologies used to design, build, and scale <span className="text-secondary"> real-world applications. </span> 
         </p>
       </motion.div>
 

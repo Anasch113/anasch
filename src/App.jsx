@@ -3,6 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import NewExperience from "./NewComponents/NewExperience";
 import NewTechs from "./NewComponents/NewTechs";
 import ConnectWithMe from "./NewComponents/ConnectWithMe";
+import ServicesSection from "./NewComponents/ServicesOffer";
 const App = () => {
 
 
@@ -14,6 +15,7 @@ const App = () => {
           <Hero />
         </div>
         <About />
+        <ServicesSection/>
         <NewExperience />
         <NewTechs />
         <Works />
