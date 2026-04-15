@@ -28,7 +28,7 @@ export default function HeroSection() {
           />
         </div>
 
-        {/* Heading of hero section*/}
+        {/* Heading*/}
         <h1 className="text-4xl sm:text-5xl font-semibold leading-snug text-gray-100">
           Hi, I’m <span className="text-secondary">Anas Rafiq</span> , Software Developer and AI expert
         </h1>
