@@ -221,12 +221,12 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Full Stack Developer | Level 2 Seller",
+    title: "Full Stack Developer | Top Rated Seller",
     company_name: "Fiverr",
     icon: fiverr,
     date: "January 2022 - Present",
     points: [
-      "As a Level 2 Seller on Fiverr, I’ve successfully delivered multiple end-to-end projects for global clients, focusing on quality, clarity, and long-term value. I work closely with clients to understand their goals, translate ideas into well-structured products, and deliver reliable solutions on time. My approach emphasizes clear communication, transparent processes, and building trust through consistent results and client satisfaction."
+      "As a Top Rated Seller on Fiverr, I rank among the top 1% of sellers by consistently delivering exceptional results for global clients. I’ve successfully completed multiple end-to-end projects, with a strong focus on quality, clarity, and long-term value. I work closely with clients to understand their goals, translate ideas into well-structured products, and deliver reliable solutions on time. My approach emphasizes clear communication, transparent processes, and building trust through consistent results and client satisfaction"
 
 
     ],

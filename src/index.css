@@ -3,7 +3,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+ 
+/* colors */
 .bg-deep-space {
   background-color: #0a0a0f;
 }

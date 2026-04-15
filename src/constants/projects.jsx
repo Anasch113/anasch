@@ -67,9 +67,10 @@ export const projects = [
 
         description: (
             <>
-                Selltron is an AI-powered voice assistant designed for sales and customer support teams. It listens to live customer conversations, understands context using AI (via GPT-4), and responds intelligently in real time using synthetic voice (Text-to-Speech). The system integrates with CRMs like HubSpot to display customer information and log interaction data. This MVP aims to deliver a modular, cloud-based web application with a cockpit-style interface and multilingual support.
+                Sell predator is an AI-powered receptionist designed for sales and customer support teams. It listens to live customer conversations, understands context using AI (via GPT-4), and responds intelligently in real time using synthetic voice (Text-to-Speech). The system integrates with CRMs like HubSpot to display customer information and log interaction data. This MVP aims to deliver a modular, cloud-based web application with a cockpit-style interface and multilingual support.
                 It is in development phase, We are currently working on it core pipeline enhancement  but its voice features working properly.
-                If you’d like to see more examples of my AI integrations, chatbots, or SaaS dashboards, feel free to ask . I can provide additional live demos or private access links.
+
+                It also includes the realtime phone integration feature which allows Sell predator to assist users in live calls and RAG intelligence through which users can train the sell predator on there Business related data.
 
             </>
         ),

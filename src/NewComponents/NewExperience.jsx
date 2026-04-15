@@ -21,7 +21,7 @@ const NewExperience = () => {
           Experience
         </motion.h2>
         <p className="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-         <span className="text-secondary"> A proven record</span>  of delivering reliable, high-quality solutions through real-world projects and long-term   <span className="text-secondary">professional collaborations.</span> 
+          <span className="text-secondary"> A proven record</span>  of delivering reliable, high-quality solutions through real-world projects and long-term   <span className="text-secondary">professional collaborations.</span>
         </p>
       </motion.div>
 
@@ -75,8 +75,8 @@ const NewExperience = () => {
                   className="flex items-start gap-2 text-gray-300 text-sm leading-relaxed"
                 >
                   <PiPaperPlaneRightLight
-                    className="text-yellow-400 mt-[3px]"
-                    size={16}
+                    className="text-yellow-400 mt-[1px]"
+                    size={20}
                   />
                   <p>{point}</p>
                 </motion.div>
